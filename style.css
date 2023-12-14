@@ -1,0 +1,36 @@
+*{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+section{
+    width: 100%;
+}
+img{
+    
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+}
+div{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+h3{
+    padding-top: 290px;
+    padding-left: 5px;
+}
+.personajes{
+    padding-left: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 80%;
+}
+
+.personaje{
+    position: relative;
+    width: 300px;
+    height: 350px;
+}
+
+
