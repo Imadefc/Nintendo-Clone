@@ -1,36 +1,71 @@
-*{
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body{
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgb(72, 72, 72);
+}
+ a div img{
+    width: 300px;
+    height: 300px;
+}
+a h3{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+a h3:after{
+    content: 'TM';
+    vertical-align: super;
+    font-size: 12px;
 }
 section{
-    width: 100%;
+    padding-top:48 px;
+    padding-bottom: 48px;
 }
-img{
+.personaje{
+
     
-    border-radius: 20px;
     width: 300px;
-    height: 300px;
-}
-div{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-}
-h3{
-    padding-top: 290px;
-    padding-left: 5px;
+    height: 300px; 
+    margin-bottom: 50px;
+    cursor: pointer;
 }
 .personajes{
-    padding-left: 10%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    width: 80%;
+    padding-left: 15%;
+    overflow: visible;
+    gap: 10px;
 }
-
-.personaje{
-    position: relative;
+div{
     width: 300px;
-    height: 350px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15%;
+}
+section h2{
+    margin-left: 15%;
+}
+h3{
+    margin-top: 305px;
+    margin-left: 2px;
+}
+.ay{
+    position: absolute;
+}
+.bg{
+    position: absolute;
+}
+.fondo{
+    transform: scale(1.125);
+}
+a:hover .fondo{
+    transform: scale(1);
+    transition: 0.5s;
+}
+a:hover .caracter{
+    transform: scale(1.125);
+    transition: 0.5s;
 }
 
 
