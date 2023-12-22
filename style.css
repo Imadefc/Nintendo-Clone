@@ -1,0 +1,14 @@
+--border-radius-small: 0.75rem;
+--border-radius: 1rem;
+--app-height: 1113px;
+font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 16px;
+line-height: 1.4;
+color: rgb(72, 72, 72);
+-webkit-font-smoothing: antialiased;
+box-sizing: border-box;
+position: relative;
+width: 100%;
+scroll-margin-top: 120px;
+padding-top: 3rem;
+padding-bottom: 3rem;
