@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-section {
+    margin-right: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Ajusta el margen según sea necesario */
+}
