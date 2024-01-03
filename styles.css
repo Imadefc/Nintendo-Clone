@@ -3,17 +3,44 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.footer-section li {
+    list-style: none;
+}
+.footer-section li a {
+    color: red;
+    text-decoration: none;
+    transition: color 0.03s, text-decoration 0.03s;
+}
+.footer-section li a:hover{
+    color: rgb(119, 5, 5);
+    text-decoration: underline;
+}
+.footer-section,
+#display {
+    display: inline-block;
+    vertical-align: top;
 }
 
-.footer-section {
-    margin-right: 20px; /* Ajusta el margen según sea necesario */
+.footer-section h3 {
+    margin-bottom: 5px;
+}
+
+#display {
+    font-size: 30px;
+    margin-bottom: 5px;
+    padding: 1px;
+    border-radius: 10px;
+}
+
+article {
+    display: inline-block;
 }
 
 .footer-bottom {
-    margin-top: 20px; /* Ajusta el margen según sea necesario */
+    display: block;
+    clear: both;
+}
+.footer-bottom ul {
+    color: white;
+    text-decoration: none;
 }
