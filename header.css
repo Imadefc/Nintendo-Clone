@@ -1,59 +1,41 @@
-*{
+*{ 
     padding: 0;
     margin: 0;
-    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
     color: #484848;
     line-height: 1.4;
-    font-size: 16px;
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
+    -webkit-font-smoothing: antialiased;
 }
 
 header{
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
     align-items: center;
-    height: 69px;
+    height: 52px;
     border-bottom: 1px solid rgb(218, 218, 218);
     background-color: rgb(255, 255, 255);
     position: relative;
     z-index: 100;
 }
 
-nav{
-    position: sticky;
-    top: 0px;
-    width: 100%;
-    z-index: 1000;
-}
 
-form{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid #484848;
-    height: 2.125rem;
-    width: 100%;
-}
-
-#searchtop, h3{
-    width:100%;
-    padding: 0px 140px 0px 0px;
-    background-color: transparent;
-    border: none;
-    display: inline;
-}
-
-#logo img{
-    width: 69px;
-    height: 69px;
+#logo {
+    width: 105px;
+    height: 52px;
     background-color: rgb(230, 0, 18);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(255, 255, 255);
+    overflow: hidden;
+    padding-left: 0px;
+}
+
+#logo img {
+    width: 69px;
+    height: 20px;
 }
 
 section:first-child{
@@ -62,155 +44,226 @@ section:first-child{
     gap: 1rem;
 }
 
+.searchinput{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #484848;
+    height: 2.125rem;
+    width: 100%;
+}
+
+.searchinput:hover{
+    border-bottom: 1px solid  rgb(230, 0, 18);;
+}
+
+.search {
+    width: 100%;
+}
+
+.searchbutton, .searchTitle{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    display: inline;
+    padding-right: 115px;
+}
+
+/* cambiar font weigth */
+.searchTitle {
+    color: rgb(114, 114, 114);
+    font-size: 100%;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-shadow: none;
+    text-align: center;
+}
+
 #lupa{
-    width: 18px;
-    height: 18px;
-    margin: 0px;
+    margin-right: 10px;
     display: inline-flex;
     position: relative;
     justify-content: left;
+    border: none;
+    width: 18px;
+    height: 18px;
 }
 
-#dropCategories{
-    display: inline;
+.search:hover .searchTitle{ 
+    color: rgb(230, 0, 18);
+}
+
+.search:hover svg path{
+    fill: rgb(230, 0, 18);
+}
+
+.dropdownCategories {
+    border: none;
     background-color: transparent;
-    border: 0;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0px 2px 0px 0px;
+    width: 120px;
+    text-align: left;
+}
+
+.dropCategories {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.drop-content {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    background-color: white;
+    min-width: 135px;
+    z-index: 1;
+    border-radius: 15px;
+    height: 175px;
+    box-shadow:  0px 8px 8px 0px rgb(72, 72, 72);
+    top:  calc(100% + 5px);
+}
+
+
+.drop-content a {
+    line-height: 1.5;
+    color: rgb(72, 72, 72);
+    text-decoration: none;
+    padding-left: 10px;
+    display: block;
+    text-align: left;
+    padding-top: 8px;
+    font-size: 13px;
+}
+
+/* falta espacio blanco arriba del color de fondo */
+
+.drop-content #categories{
+    background-color:  lightgray;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.drop-content #support{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.drop-content a:hover  {
+    background-color: rgb(240, 236, 236);
+}
+
+.drop-content #categories:hover  {
+    background-color: rgb(240, 236, 236);
+}
+
+.dropdownCategories:hover {
+    color: rgb(230, 0, 18);
+}
+
+.dropCategories:hover svg path{
+    fill: rgb(230, 0, 18);
 }
 
 .topRightItems{
     display: flex;
-    align-items: center;
-    gap: 2.75rem;
-    padding: 0px 20px 0px 20px;
-}
-
-.linksignup{
-    padding-top: 0.875rem;
-    padding-bottom: 0.875rem;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1;
-    margin: 0px;
-    border: none;
-    background-color: transparent;
+    gap: 2rem;
+    padding: 5px 5px 5px 20px;
+    vertical-align: middle; 
 }
 
 .topRightItems a{
-    color: inherit;
     text-decoration: none;
-    font-size: 20px;
     border: none;
     background-color: transparent;
-    }
+}
 
-/* h3:hover, select:hover, span:hover, path:hover{
+.linksignup{
+    border: none;
+    background-color: transparent;
+}
+
+.topRightItems svg {
+    margin: 0px 0.2rem 0px 0px;
+    vertical-align: middle; 
+    padding-bottom: 2px;
+} 
+
+
+.buttonLinkSupport:hover span {
     color: rgb(230, 0, 18);
-} */
-.buttonLinkSupport:hover svg {
+}
+
+.buttonLinkSupport:hover .svg path {
     fill: rgb(230, 0, 18);
 }
-#flag{
+
+.buttonLinkWishlist:hover span {
+    color: rgb(230, 0, 18);
+}
+
+.buttonLinkWishlist:hover .svg path{
+    fill: rgb(230, 0, 18);
+}
+
+.buttonLinkCart:hover span {
+    color: rgb(230, 0, 18);
+}
+
+.buttonLinkCart:hover .svg path {
+    fill: rgb(230, 0, 18);
+}
+
+.linksignup:hover span {
+    color: rgb(230, 0, 18);
+}
+
+.linksignup:hover .svg path {
+    fill: rgb(230, 0, 18);
+}
+
+.regionSelector{
     display: block;
-    -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: center;
     justify-content: center;
-    width: 24px;
-    height: 15px;
-    padding: 0px 8px 0px 0px;
+    padding: 0px 30px 0px 0px;
 }
 
-.topDownItems{
-    display: flex;
-    position: relative;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    height: 50px;
-    border-bottom: 1px solid rgb(218, 218, 218);
-    background-color: rgb(255, 255, 255);
-    z-index: 1;
-    gap: 0.5rem;
-    padding: 2px 0px 0px 0px;
+.regionSelector picture img {
+    border: solid 0.5px rgb(218, 218, 218);
+    border-radius: 3px;
+}
+
+
+/* Mobile Style */
+
+@media (max-width: 1260px) and (min-width: 1025px){
+
+    .searchbutton, .searchTitle{
+        padding-right: 50px; 
+    } 
 
 }
 
-.svg{
-    margin:0;
-    padding: 0px 3px 0px 0px;
-    display: relative;
-}
 
-.dropNintendo{
-    position: relative;
-    padding: 0.75rem;
-}
+@media (max-width: 1024px) {
 
-.dropdownstore{
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 30px;
-    transition: all 200ms ease-in-out 0s;
-}
+    .search{
+        display: none;
+    }
 
-.dropdownholiday{
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 30px;
-    transition: all 200ms ease-in-out 0s;
-}
+    .dropCategories{
+        display: none;
+    }
 
-.dropdowngames{
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 30px;
-    transition: all 200ms ease-in-out 0s;
-}
-.dropdownswitch{
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 30px;
-    transition: all 200ms ease-in-out 0s;
-}
+    .buttonLinkSupport, .buttonLinkWishlist, .buttonLinkCart, .linksignup {
+        display: none;
+    }
 
-.dropdownnews{
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 30px;
-    transition: all 200ms ease-in-out 0s;
-}
+    header{
+        background-color:  rgb(230, 0, 18);
+        width: 100%;
+    }
 
-.dropdownplay{
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 30px;
-    transition: all 200ms ease-in-out 0s;
 }
-
-svg{
-    padding: 0px 4px 0px 4px;
-}
-

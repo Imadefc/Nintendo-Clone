@@ -1,0 +1,470 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #484848;
+    line-height: 1.4;
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+.headerHidden {
+    visibility: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    height: 52px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 2001;
+    position: fixed;
+    width: 100%;
+}
+
+#logo {
+    width: 105px;
+    height: 52px;
+    background-color: rgb(230, 0, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 0px;
+}
+
+#logo img {
+    width: 69px;
+    height: 20px;
+}
+
+section:first-child{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchContainerHidden {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #484848;
+    height: 2.125rem;
+    width: 40%;
+    margin-left: 10px;
+}
+
+.searchContainerHidden:hover{
+    border-bottom: 1px solid  rgb(230, 0, 18);;
+}
+
+.searchHidden {
+    width: 100%;
+}
+
+.searchHidden:hover .tosearch{ 
+    color: rgb(230, 0, 18);
+}
+
+.searchHidden:hover svg path{
+    fill: rgb(230, 0, 18);
+}
+
+.dropsearchHidden {
+    display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 52px;
+    background-color: rgb(255, 255, 255);
+    transition: all 200ms ease-in-out 25ms;
+}
+
+.dropsearchContainerHidden{
+    display: inline-flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    height: 52px;
+}
+
+.searchbuttonHidden{
+    width:100%;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+}
+
+#lupaHidden {
+    margin-right: 10px;
+    display: inline-flex;
+    position: relative;
+    justify-content: left;
+    border: none;
+    width: 18px;
+    height: 18px;
+}
+
+.searchContainerHidden .toSearch {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    font-weight: 400;
+    font-size: 100%;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-shadow: none;
+}
+
+.dropdownCategoriesHidden {
+    border: none;
+    background-color: transparent;
+    width: 160px;
+    padding: 0px 8px 0px 7px;
+    text-align: left;
+}
+
+.dropCategoriesHidden {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdownCategoriesHidden:hover {
+    color: rgb(230, 0, 18);
+}
+
+.dropCategoriesHidden:hover svg path{
+    fill: rgb(230, 0, 18);
+}
+
+.toclosebutton {
+    display: block;
+    border: none;
+    background: none;
+    padding-left: 780px;
+}
+
+.dropsearchtopicsContainer {
+    display: block;
+    top: 100%;
+    position: absolute;
+    z-index: 2001;
+    background-color:  rgb(255, 255, 255);
+    width: 100%; 
+    padding: 25px 115px;
+}
+
+.dropdownsearchtopics {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: 1fr;
+}
+
+.dropsearchtopics {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.dropsearchtopics .topics li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.dropsearchtopicsContainer .topics a{
+    color: rgb(230, 0, 18);
+    text-decoration: none;
+    margin: 0px 0px 8px;
+}
+
+.topStoreProducts {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.trendingTopics  {
+    margin: 0px 0px 12px;
+    display: flex;
+}
+
+.topstoreproducts {
+    margin: 0px 0px 12px;
+    display: flex;
+}
+
+.insideStoreProducts {
+    display: grid;
+    grid-template-columns: 342px 342px;
+    grid-template-rows: 79px 79px;
+    gap: 1rem; 
+    margin: 0px 0px 24px;
+}
+
+.redEdition {
+    grid-row: 1;
+    grid-column: 1;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.containerRedEdition {
+    display: grid;
+    grid-template-columns: 140px 124px 64px ;
+    grid-template-rows: 46px 32px;
+}
+
+
+/* cambiar font-weigth */
+.redEdition .oledRed {
+    display: flex;
+    font-size: 14px;
+    align-items: flex-start;
+    flex-direction: row;
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 4px;
+    padding-left: 8px;
+}
+
+
+.redEdition img {
+    display: flex;
+    width: 75px;
+    height: 76px;
+    overflow: hidden;
+    margin: 0px 20px 0px 30px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+.downredEdition {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+.divisorazul {
+    color:#3946A0;
+    font-weight: 800;
+    font-size: larger;
+    padding-left: 8px;
+}
+
+.hardwareName {
+    padding-left: 6px; 
+    margin-top: 7px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* falta animación */
+.addtoheart {
+    display: flex;
+    width: 2.125rem;
+    height: 2.125rem;
+    border: none;
+    appearance: none;
+    background: none;
+    font-size: 1em;
+    line-height: 1;
+    grid-row: 2;
+    grid-column: 3;
+    margin-top: 2px;
+    margin-left: 40px;
+}
+
+.addtoheart svg path {
+    transform-origin: 27px 27px;
+    animation: auto ease 0s 1 normal none running none;
+    color:rgb(230, 0, 18);
+}
+
+
+.mariorpg {
+    grid-row: 2;
+    grid-column: 1;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.containerMariorPG {
+    display: grid;
+    grid-template-columns: 140px 124px 64px ;
+    grid-template-rows: 46px 32px;
+}
+
+.mariorpg .RPG {
+    display: flex;
+    font-size: 14px;
+    align-items: flex-start;
+    flex-direction: row;
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+
+
+.mariorpg img {
+    display: flex;
+    padding-left: 1px;
+    width: 140px;
+    height: 76px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.downMariorRPG {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.divisor {
+    color:rgb(230, 0, 18);
+    font-weight: 800;
+    font-size: larger;
+    padding-left: 8px;
+}
+
+
+.switchName {
+    padding-top: 4px;
+    padding-left: 6px; 
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.superwonder {
+    grid-row: 1;
+    grid-column: 2;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.containerWonder{
+    display: grid;
+    grid-template-columns: 140px 124px 64px;
+    grid-template-rows: 46px 32px;
+}
+
+.superwonder .wonderbros {
+    display: flex;
+    font-size: 14px;
+    align-items: flex-start;
+    flex-direction: row;
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+
+.superwonder img {
+    display: flex;
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 140px;
+    height: 78px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.downWonder {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+.moveIt {
+    grid-row: 2;
+    grid-column: 2;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.containerWario {
+    display: grid;
+    grid-template-columns: 140px 124px 64px;
+    grid-template-rows: 46px 32px;
+}
+
+.moveIt .moveit {
+    display: flex;
+    font-size: 14px;
+    align-items: flex-start;
+    flex-direction: row;
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+
+.moveIt img {
+    display: flex;
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 140px;
+    height: 79px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+
+.downWario {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+
+
