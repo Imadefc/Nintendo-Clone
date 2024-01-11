@@ -7,7 +7,6 @@
     font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 700;
     cursor: pointer;
-    -webkit-font-smoothing: antialiased;
 }
 
 nav{
@@ -25,9 +24,7 @@ nav{
 .topDownItems{
     display: flex;
     position: relative;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     height: 50px;
     border-bottom: 1px solid rgb(218, 218, 218);
@@ -57,7 +54,6 @@ nav{
     border: none;
     background: transparent;
     padding: 12px;
-    transition: all 200ms ease-in-out 0s;
 }
 
 .dropdownstore {
@@ -65,22 +61,12 @@ nav{
     background: transparent;
 }
 
-/* .dropdownholiday{
-    display: inline-flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 12px;
-    transition: all 200ms ease-in-out 0s;
-} */
-
 .dropdowngames{
     display: inline-flex;
     align-items: center;
     border: none;
     background: transparent;
     padding: 12px;
-    transition: all 200ms ease-in-out 0s;
 }
 .dropdownswitch{
     display: inline-flex;
@@ -88,7 +74,6 @@ nav{
     border: none;
     background: transparent;
     padding: 12px;
-    transition: all 200ms ease-in-out 0s;
 }
 
 .dropdownnews{
@@ -97,7 +82,6 @@ nav{
     border: none;
     background: transparent;
     padding: 12px;
-    transition: all 200ms ease-in-out 0s;
 }
 
 .dropdownplay{
@@ -106,7 +90,6 @@ nav{
     border: none;
     background: transparent;
     padding: 12px;
-    transition: all 200ms ease-in-out 0s;
 }
 
 .dropdownstore:hover span {
@@ -177,8 +160,6 @@ nav{
         position: fixed;
         bottom: 0px;
         display: block;
-        left: 50%;
-        transform: translateX(-50%);
         z-index: 1000;
     }
     
@@ -193,9 +174,7 @@ nav{
         position: relative;
         height: 58px;
         display: flex;
-        -webkit-box-align: center;
         align-items: center;
-        -webkit-box-pack: justify;
         justify-content: space-between;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -206,34 +185,24 @@ nav{
     
     .bottomMenu {
         display: flex;
-        -webkit-box-pack: center;
         justify-content: center;
         flex: 1 1 auto;
         position: relative;
         height: 58px;
-        -webkit-box-align: center;
         align-items: center;
         border: none;
         background: transparent;
-        cursor: pointer;
-        padding: 0px;
-        transition: all 200ms ease-in-out 0s;
     }
     
     .whishListBottom {
         display: flex;
-        -webkit-box-pack: center;
         justify-content: center;
         flex: 1 1 auto;
         position: relative;
         height: 58px;
-        -webkit-box-align: center;
         align-items: center;
         border: none;
         background: transparent;
-        cursor: pointer;
-        padding: 0px;
-        transition: all 200ms ease-in-out 0s;
     }
     
     .searchBottom {
@@ -252,23 +221,17 @@ nav{
     
     .shoppingCartBottom {
         display: flex;
-        -webkit-box-pack: center;
         justify-content: center;
         flex: 1 1 auto;
         position: relative;
         height: 58px;
-        -webkit-box-align: center;
         align-items: center;
         border: none;
         background: transparent;
-        cursor: pointer;
-        padding: 0px;
-        transition: all 200ms ease-in-out 0s;
     }
     
     .cartContainer {
         display: grid;
-        -webkit-box-pack: center;
         justify-content: center;
         position: relative;
         color: inherit;
@@ -277,18 +240,13 @@ nav{
     
     .accountBottom {
         display: flex;
-        -webkit-box-pack: center;
         justify-content: center;
         flex: 1 1 auto;
         position: relative;
         height: 58px;
-        -webkit-box-align: center;
         align-items: center;
         border: none;
         background: transparent;
-        cursor: pointer;
-        padding: 0px;
-        transition: all 200ms ease-in-out 0s;
     }
     
     

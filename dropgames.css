@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #484848;
+    line-height: 1.4;
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.gamesContainer {
+    visibility: "";
+    display: flex;
+    align-items: center; 
+    top: calc(100% - 7px);
+    position: absolute;
+    z-index: 2001;
+    background-color:  rgb(255, 255, 255);
+    width: 100%; 
+    height: 165px;
+    padding: 12px 121px 40px;
+}
+
+.buttoncloseContainer{
+    display: block;
+    right: 100%;
+}
+
+.toclosebuttongames {
+    fill:lightgrey;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+.games1Container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.games2Container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.games3Container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.games4Container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

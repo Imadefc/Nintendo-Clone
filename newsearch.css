@@ -7,14 +7,12 @@
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
 }
 
 .headerHidden {
     visibility: hidden;
     display: flex;
-    justify-content: space-between;
     align-items: center; 
     height: 52px;
     border-bottom: 1px solid rgb(218, 218, 218);
@@ -50,7 +48,6 @@ section:first-child{
 .searchContainerHidden {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid #484848;
     height: 2.125rem;
     width: 40%;
@@ -80,7 +77,6 @@ section:first-child{
     width: 100%;
     height: 52px;
     background-color: rgb(255, 255, 255);
-    transition: all 200ms ease-in-out 25ms;
 }
 
 .dropsearchContainerHidden{
@@ -110,20 +106,14 @@ section:first-child{
 
 .searchContainerHidden .toSearch {
     width: 100%;
-    background-color: transparent;
     border: none;
     display: inline-flex;
     font-weight: 400;
-    font-size: 100%;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-shadow: none;
 }
 
 .dropdownCategoriesHidden {
-    border: none;
     background-color: transparent;
+    border: none;
     width: 160px;
     padding: 0px 8px 0px 7px;
     text-align: left;
@@ -157,7 +147,8 @@ section:first-child{
     z-index: 2001;
     background-color:  rgb(255, 255, 255);
     width: 100%; 
-    padding: 25px 115px;
+    height: 300px ;
+    padding: 12px 121px 40px;
 }
 
 .dropdownsearchtopics {
@@ -174,7 +165,6 @@ section:first-child{
 
 .dropsearchtopics .topics li {
     display: flex;
-    justify-content: space-between;
     list-style: none;
 }
 
@@ -184,6 +174,28 @@ section:first-child{
     margin: 0px 0px 8px;
 }
 
+/* chequear hover para opacity */
+
+.dropsearchtopicsContainer:hover #oledModel {
+    color: rgb(180, 39, 53);
+}
+
+.dropsearchtopicsContainer:hover #nintendoSwitch {
+    color: rgb(180, 39, 53);
+}
+
+.dropsearchtopicsContainer:hover #brosWonder {
+    color: rgb(180, 39, 53);
+}
+
+.dropsearchtopicsContainer:hover #switchGames {
+    color: rgb(180, 39, 53);
+}
+
+.dropsearchtopicsContainer:hover #zeldaGames {
+    color: rgb(180, 39, 53);
+}
+
 .topStoreProducts {
     grid-column-start: 2;
     grid-column-end: 3;
@@ -191,12 +203,12 @@ section:first-child{
 
 .trendingTopics  {
     margin: 0px 0px 12px;
-    display: flex;
+    display: block;
 }
 
 .topstoreproducts {
     margin: 0px 0px 12px;
-    display: flex;
+    display: block;
 }
 
 .insideStoreProducts {
@@ -213,7 +225,6 @@ section:first-child{
     border: rgb(218, 218, 218) solid 1px;
     border-radius: 15px;
     display: flex;
-    flex-direction: row;
     position: relative;
 }
 
@@ -226,10 +237,7 @@ section:first-child{
 
 /* cambiar font-weigth */
 .redEdition .oledRed {
-    display: flex;
     font-size: 14px;
-    align-items: flex-start;
-    flex-direction: row;
     grid-row: 1;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -237,9 +245,12 @@ section:first-child{
     padding-left: 8px;
 }
 
+.redEdition:hover .oledRed {
+    color: rgb(230, 0, 18);
+}
 
 .redEdition img {
-    display: flex;
+    display: block;
     width: 75px;
     height: 76px;
     overflow: hidden;
@@ -277,7 +288,7 @@ section:first-child{
 
 /* falta animación */
 .addtoheart {
-    display: flex;
+    display: block;
     width: 2.125rem;
     height: 2.125rem;
     border: none;
@@ -289,12 +300,34 @@ section:first-child{
     grid-column: 3;
     margin-top: 2px;
     margin-left: 40px;
+    position: relative;
 }
 
+/* falta animación */
 .addtoheart svg path {
     transform-origin: 27px 27px;
     animation: auto ease 0s 1 normal none running none;
     color:rgb(230, 0, 18);
+}
+
+.addtoheart .tooltip {
+    position: absolute;
+    visibility: hidden;
+    width: 90px;
+    background-color: white;
+    color: #484848;
+    text-align: center;
+    z-index: 1;
+    font-size: 11px;
+    font-weight: 300;
+    border:#484848 solid 1px;
+    padding: 3px;
+    top: 100%;
+    left: 80%;
+}
+
+.addtoheart:hover .tooltip {
+    visibility: visible;
 }
 
 
@@ -304,7 +337,6 @@ section:first-child{
     border: rgb(218, 218, 218) solid 1px;
     border-radius: 15px;
     display: flex;
-    flex-direction: row;
     position: relative;
 }
 
@@ -315,10 +347,7 @@ section:first-child{
 }
 
 .mariorpg .RPG {
-    display: flex;
     font-size: 14px;
-    align-items: flex-start;
-    flex-direction: row;
     grid-row: 1;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -326,9 +355,13 @@ section:first-child{
     padding-left: 8px;
 }
 
+.mariorpg:hover .RPG {
+    color: rgb(230, 0, 18);
+}
+
 
 .mariorpg img {
-    display: flex;
+    display: block;
     padding-left: 1px;
     width: 140px;
     height: 76px;
@@ -341,7 +374,6 @@ section:first-child{
 
 .downMariorRPG {
     display: inline-flex;
-    align-items: flex-start;
     height: 40%;
     grid-row: 2;
     grid-column-start: 2;
@@ -369,7 +401,6 @@ section:first-child{
     border: rgb(218, 218, 218) solid 1px;
     border-radius: 15px;
     display: flex;
-    flex-direction: row;
     position: relative;
 }
 
@@ -380,10 +411,6 @@ section:first-child{
 }
 
 .superwonder .wonderbros {
-    display: flex;
-    font-size: 14px;
-    align-items: flex-start;
-    flex-direction: row;
     grid-row: 1;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -391,8 +418,12 @@ section:first-child{
     padding-left: 8px;
 }
 
+.superwonder:hover .wonderbros {
+    color: rgb(230, 0, 18);
+}
+
 .superwonder img {
-    display: flex;
+    display: block;
     margin-left: -1px;
     margin-top: -1px;
     width: 140px;
@@ -406,7 +437,6 @@ section:first-child{
 
 .downWonder {
     display: inline-flex;
-    align-items: flex-start;
     height: 40%;
     grid-row: 2;
     grid-column-start: 2;
@@ -420,7 +450,6 @@ section:first-child{
     border: rgb(218, 218, 218) solid 1px;
     border-radius: 15px;
     display: flex;
-    flex-direction: row;
     position: relative;
 }
 
@@ -431,10 +460,6 @@ section:first-child{
 }
 
 .moveIt .moveit {
-    display: flex;
-    font-size: 14px;
-    align-items: flex-start;
-    flex-direction: row;
     grid-row: 1;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -442,17 +467,37 @@ section:first-child{
     padding-left: 8px;
 }
 
+.moveIt:hover .moveit {
+    color: rgb(230, 0, 18);
+}
+
 .moveIt img {
-    display: flex;
+    display: block;
+    position: relative;
     margin-left: -1px;
     margin-top: -1px;
     width: 140px;
     height: 79px;
-    overflow: hidden;
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+}
+
+/* chequear hover de imagen */
+
+.moveIt img::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 0; 
+    transition: opacity 200ms ease-in-out 25ms;
+}
+
+.moveIt img:hover::before {
+    opacity: 1;
 }
 
 

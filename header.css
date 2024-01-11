@@ -7,7 +7,6 @@
     font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    -webkit-font-smoothing: antialiased;
 }
 
 header{
@@ -47,7 +46,6 @@ section:first-child{
 .searchinput{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-bottom: 1px solid #484848;
     height: 2.125rem;
     width: 100%;
@@ -72,12 +70,7 @@ section:first-child{
 /* cambiar font weigth */
 .searchTitle {
     color: rgb(114, 114, 114);
-    font-size: 100%;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    text-shadow: none;
-    text-align: center;
+    font-size: 300;
 }
 
 #lupa{
@@ -176,7 +169,6 @@ section:first-child{
 .topRightItems a{
     text-decoration: none;
     border: none;
-    background-color: transparent;
 }
 
 .linksignup{
