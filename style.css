@@ -30,16 +30,21 @@
   width: 100%;
   height: 100%;
   grid-gap: 0;
-  padding: 10px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgb(218, 218, 218);
 }
 
 #mainImage {
-  width: auto;
-  max-width: 100%;
-  max-height: 40vh;
-  border-radius: 30px;
+  /* width: auto; */
+  /* max-width: 100%;
+  max-height: 40vh; */
+  width: 1440px;
+  height: 520px;
+  border-radius: 20px;
   align-self: start;
-  padding: 15px;
+  /* padding: 15px; */
+  box-shadow: 0px 0px 8px 5px rgb(224, 223, 223); 
+  margin-top: 30px;
 }
 
 .summary {
@@ -57,13 +62,15 @@
   z-index: -1;
   top: 0;
   width: 100%;
-  height: 200px;
+  /* height: 200px; */
+  height: 430px;
   cursor: pointer;
 }
 
 #middlebutton {
-    grid-template-columns: 50% auto auto;
-    margin-bottom: 40px;
+    grid-template-columns: 55% auto auto;
+    margin-bottom: 50px;
+    padding-top: 30px;
 }
 
 #flowButtons {
@@ -129,7 +136,8 @@
   display: grid;
   grid-auto-flow: column;
   width: 70%;
-  justify-self: right;
+  margin-right: 20px;
+  justify-self: right; 
   align-items: center;
   grid-gap: 10px;
 }
