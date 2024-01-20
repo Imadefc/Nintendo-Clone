@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "museo-sans-700";
+  src: url(MuseoSans_700.ttf);
+}
+*{
+  font-family: "museo-sans-700";
+  --nintendo-font:"museo-sans-700", -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-font: rgb(72, 72, 72);
+  --font-weight-nintendo: 700;
+  --font-size-text: 0.875rem;
+  --line-text: 1.4;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+.pointer{
+  cursor: pointer;
+}
+.grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+}
+
+#skeleton {
+  width: 100%;
+  height: 100%;
+  grid-gap: 0;
+  padding: 10px;
+}
+
+#mainImage {
+  width: auto;
+  max-width: 100%;
+  max-height: 40vh;
+  border-radius: 30px;
+  align-self: start;
+  padding: 15px;
+}
+
+.summary {
+  font-size: 28px;
+  color:rgb(72, 72, 72);
+}
+
+.rating {
+  font-size: 10px;
+}
+
+#imageBackground {
+  position: absolute;
+  background-image: url(bg2.avif);
+  z-index: -1;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+}
+
+#middlebutton {
+    grid-template-columns: 50% auto auto;
+    margin-bottom: 40px;
+}
+
+#flowButtons {
+    grid-auto-flow: column;
+    padding: 0% 30% 0% 30%;
+    width: min-content;
+    grid-gap: 20px;
+}
+
+.smallButton, .normalButton {
+  border-radius: 100px;
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  color: white;
+  border: 0px;
+  transition: all 0.1s ease-in-out;
+}
+
+.smallButton {
+  height: 8px;
+  width: 50px;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.normalButton:hover {
+  transform: scale(1.1);
+  background-color: red;
+}
+
+.gray:hover {
+  transform: scale(1.1);
+  background-color: gray;
+}
+
+/*
+#flowButtons svg {
+  margin-right: 2px;
+}
+*/
+
+#botonrojo {
+  background-color: rgb(230, 0, 18);
+  color: white;
+  border-radius: 10px;
+  height: 48px;
+  align-self: center;
+  border: 0;
+  padding: 0 24px 0 24px;
+  font-size: 18px;
+  transition: all 0.1s ease-in-out;
+}
+
+#botonrojo:hover {
+  background-color: rgb(193, 9, 24);
+  transform: scale(1.05);
+}
+
+#ratingtag {
+  display: grid;
+  grid-auto-flow: column;
+  width: 70%;
+  justify-self: right;
+  align-items: center;
+  grid-gap: 10px;
+}
+
+
+@media (max-width: 700px) {
+  #middlebutton {
+    grid-auto-flow: row;
+    width: 100%;
+    grid-template-columns: none;
+    justify-items: center;
+  }
+  #ratingtag {
+    display: grid;
+    grid-auto-flow: column;
+    width: 50%;
+    justify-self: center;
+    align-items: center;
+    grid-gap: 10px;
+  }
+}
