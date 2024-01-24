@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
+#switchContainer {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column; 
+    top: calc(100% + 2px);
+    position: absolute;
+    z-index: 899;
+    background-color:  rgb(255, 255, 255);
+    align-content: space-between;
+    padding-right: 20px;
+    width: 100%;
+    left: 0%;
+    height: 145px;
+    border-bottom: 1px solid  rgb(218, 218, 218);
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.switchcloseContainer {
+    display: flex;
+    justify-content: flex-end ;
+    height: 30px;
+    padding-top: 5px;
+}
+
+.switchcloseContainer svg {
+    padding: 0px 20px 0px 0px;
+}
+
+.switchcloseContainer svg path{
+    color: rgb(200, 200, 200);
+}
+
+.switchcloseContainer:hover svg path{
+    color: #484848;
+}
+
+#toclosebuttonswitch {
+    background-color: transparent;
+    border: none;
+}
+
+.switchlinksContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.75rem;
+    width: 100%;
+    height: 145px;
+}
+
+.lineupWrapper,
+.accesoriespWrapper,
+.compareWrapper,
+.shopsystemsWrapper,  
+.serviceWrapper  {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.lineupimgContainer{
+    display: flex;
+    border: 1px lightgray solid;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 259px;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.lineupimgContainer .lineup {
+    width: 258px; 
+    height: 67px;
+}
+
+.accesoriesimgContainer,
+.servicesvgContainer,
+.shopSystemsimgContainer{
+    display: flex;
+    border: 1px lightgray solid;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+
+.accesoriesimgContainer .accesories {
+    width: 118px;
+}
+
+.servicesvgContainer svg {
+    width: 45px;
+    height: 45px;
+    padding: 0px;
+    pointer-events: auto;
+}
+
+.servicesvgContainer svg path {
+    color:  rgb(230, 0, 18);
+}
+
+.compareWrapper .switchTitles{
+    width: 130px;
+    margin-left: 2px;
+}
+
+.comparesvgContainer{
+    display: flex;
+    border: 1px lightgray solid;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 70px;
+    margin-bottom: 8px;
+}
+
+.shopSystemsimgContainer .shopsystems{
+    width: 120px;
+}
+
+.switchTitles {
+    display: block;
+    width: 120px;
+    margin-left: 3px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.switchTitles1 {
+    display: block;
+    width: 200px;
+    margin-left: 30px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.lineupWrapper:hover .switchTitles1{
+    color: rgb(230, 0, 18);
+}
+
+.compareWrapper:hover .switchTitles,
+.serviceWrapper:hover .switchTitles,
+.accesoriesWrapper:hover .switchTitles,
+.shopsystemsWrapper:hover .switchTitles{
+    color: rgb(230, 0, 18);
+}
+
+.compareWrapper:hover .comparesvgContainer,
+.serviceWrapper:hover .servicesvgContainer, 
+.lineupimgContainer:hover .lineup,
+.accesoriesWrapper:hover .accesories,
+.shopsystemsWrapper:hover .shopsystems{
+    background-color: rgb(230, 0, 18);
+    border-radius: 15px;
+    height: 72px;
+}
+
+.comparesvgContainer:hover svg path{ 
+    fill: rgb(255, 255, 255);
+}
+
+

@@ -1,12 +1,21 @@
-*{
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
+*{ 
     padding: 0;
     margin: 0;
     color: #484848;
     line-height: 1.4;
-    font-size: 14px;
-    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px; 
     font-weight: 700;
     cursor: pointer;
+    font-family: 'Museo Sans Rounded', sans-serif;
 }
 
 nav{
@@ -14,11 +23,13 @@ nav{
     top: 0px;
     width: 100%;
     z-index: 1000; 
+
 }
 
 .topDownItems svg {
     padding-left: 4px;
     padding-right: 4px;
+    transition: all 200ms ease-in-out 0s;
 }
 
 .topDownItems{
@@ -26,13 +37,16 @@ nav{
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 44px;
     border-bottom: 1px solid rgb(218, 218, 218);
     background-color: rgb(255, 255, 255);
     z-index: 1;
-    gap: 0.5rem;
+    gap: 1rem;
     padding: 2px 0px 0px 0px;
-} 
+    transition: all 200ms ease-in-out 0s;
+    width: 100%;
+}
+
 
 .svg{
     margin:0;
@@ -40,15 +54,32 @@ nav{
     display: relative;
 }
 
+#downchevrongames, 
+#downchevronplay,
+#downchevronswitch,
+#downchevroncategories,
+#downchevronstore{
+    transition: transform 0.3s ease;
+}
+
 .bottomstyle{
     display: inline-flex;
     position: relative;
-    padding: 0.75rem;
-    padding-right: 40px;
-    gap: 0.75rem;
+    padding-top: 4px;
 }
 
-.dropNintendo{
+#dropNintendo{
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    
+}
+
+#dropdownnews,
+#dropdowngames,
+#dropdownswitch,
+#dropdownplay{
     display: inline-flex;
     align-items: center;
     border: none;
@@ -56,89 +87,27 @@ nav{
     padding: 12px;
 }
 
-.dropdownstore {
+#dropdownstore {
     border: none;
     background: transparent;
 }
 
-.dropdowngames{
-    display: inline-flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 12px;
-}
-.dropdownswitch{
-    display: inline-flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 12px;
-}
-
-.dropdownnews{
-    display: inline-flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 12px;
-}
-
-.dropdownplay{
-    display: inline-flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-    padding: 12px;
-}
-
-.dropdownstore:hover span {
+#dropdownstore:hover span,
+#dropdowngames:hover span,
+#dropdownswitch:hover span, 
+#dropdownnews:hover span,
+#dropdownplay:hover span{
     color: rgb(230, 0, 18);
 }
 
-.dropdownstore:hover svg path {
+#dropdownnews:hover svg path,
+#dropdownplay:hover svg path,
+#dropdownswitch:hover svg path,
+#dropdowngames:hover svg path,
+#dropdownstore:hover svg path {
     fill: rgb(230, 0, 18);
 }
 
-.dropdownholiday:hover span {
-    color: rgb(230, 0, 18);
-}
-
-.dropdownholiday:hover svg path {
-    fill: rgb(230, 0, 18);
-}
-
-.dropdowngames:hover span {
-    color: rgb(230, 0, 18);
-}
-
-.dropdowngames:hover svg path {
-    fill: rgb(230, 0, 18);
-}
-
-.dropdownswitch:hover span {
-    color: rgb(230, 0, 18);
-}
-
-.dropdownswitch:hover svg path {
-    fill: rgb(230, 0, 18);
-}
-
-.dropdownnews:hover span {
-    color: rgb(230, 0, 18);
-}
-
-.dropdownnews:hover svg path {
-    fill: rgb(230, 0, 18);
-}
-
-.dropdownplay:hover span {
-    color: rgb(230, 0, 18);
-}
-
-.dropdownplay:hover svg path {
-    fill: rgb(230, 0, 18);
-}
 
 .newNav {
     display: none;
@@ -183,17 +152,8 @@ nav{
         box-shadow: rgba(0, 0, 0, 0.2) 0px 0.25rem 0.5rem 0px;
     }
     
-    .bottomMenu {
-        display: flex;
-        justify-content: center;
-        flex: 1 1 auto;
-        position: relative;
-        height: 58px;
-        align-items: center;
-        border: none;
-        background: transparent;
-    }
-    
+    .bottomMenu,
+    .shoppingCartBottom,
     .whishListBottom {
         display: flex;
         justify-content: center;
@@ -204,7 +164,7 @@ nav{
         border: none;
         background: transparent;
     }
-    
+
     .searchBottom {
         width: 60px;
         height: 60px;
@@ -219,17 +179,6 @@ nav{
         fill: rgb(255, 255, 255);
     }
     
-    .shoppingCartBottom {
-        display: flex;
-        justify-content: center;
-        flex: 1 1 auto;
-        position: relative;
-        height: 58px;
-        align-items: center;
-        border: none;
-        background: transparent;
-    }
-    
     .cartContainer {
         display: grid;
         justify-content: center;
@@ -238,8 +187,9 @@ nav{
         }
     
     
-    .accountBottom {
+    #accountBottom {
         display: flex;
+        visibility: hidden;
         justify-content: center;
         flex: 1 1 auto;
         position: relative;
@@ -249,20 +199,55 @@ nav{
         background: transparent;
     }
     
-    
-    .bottomMenu:hover svg path{
-        fill: rgb(230, 0, 18);
+    #spinner {
+        display: block;
+        border: 4px solid rgb(224, 222, 220);
+        border-left-color: transparent;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
     }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
     
-    .accountBottom:hover svg path{
-        fill: rgb(230, 0, 18);
+        100% {
+            transform: rotate(360deg);
+        }
     }
-    
-    .shoppingCartBottom:hover svg path{
-        fill: rgb(230, 0, 18);
-    }
-    
+
+    .bottomMenu:hover svg path,
+    #accountBottom:hover svg path,
+    .shoppingCartBottom:hover svg path,
     .whishListBottom:hover svg path{
         fill: rgb(230, 0, 18);
     }
 }
+
+@media (max-width: 768px) {
+
+    .mobileBottomStyle {
+        width: 70%;
+}
+    .newnav {
+        height: 1024px;
+}
+}
+
+
+@media (max-width: 280px) {
+
+    .newnav {
+        height: 653px;
+    }
+    
+    .mobileBottomStyle {
+        width: 80%;
+        margin-left: 10px;
+    }
+        }
+    
+

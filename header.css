@@ -1,13 +1,11 @@
-*{ 
-    padding: 0;
-    margin: 0;
-    color: #484848;
-    line-height: 1.4;
-    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
 }
+
 
 header{
     display: flex;
@@ -18,6 +16,7 @@ header{
     background-color: rgb(255, 255, 255);
     position: relative;
     z-index: 100;
+    width: 100%;
 }
 
 
@@ -48,7 +47,6 @@ section:first-child{
     align-items: center;
     border-bottom: 1px solid #484848;
     height: 2.125rem;
-    width: 100%;
 }
 
 .searchinput:hover{
@@ -63,24 +61,29 @@ section:first-child{
     width: 100%;
     background-color: transparent;
     border: none;
-    display: inline;
+    display: inline-flex;
     padding-right: 115px;
 }
 
-/* cambiar font weigth */
+
 .searchTitle {
+    padding-top: 4px;
     color: rgb(114, 114, 114);
-    font-size: 300;
+    font-weight: 300;
+    padding-left: 12px;
+}
+
+.dropNewSearch {
+    width: 60px;
 }
 
 #lupa{
-    margin-right: 10px;
+    padding-top: 6px;
     display: inline-flex;
     position: relative;
     justify-content: left;
     border: none;
-    width: 18px;
-    height: 18px;
+    width: 50px;
 }
 
 .search:hover .searchTitle{ 
@@ -91,10 +94,9 @@ section:first-child{
     fill: rgb(230, 0, 18);
 }
 
-.dropdownCategories {
-    border: none;
-    background-color: transparent;
-    width: 120px;
+#dropdownCategories {
+    all: unset;
+    width: 110px;
     text-align: left;
 }
 
@@ -105,13 +107,13 @@ section:first-child{
 }
 
 
-.drop-content {
+#drop-content {
     visibility: hidden;
     display: block;
     position: absolute;
     background-color: white;
     min-width: 135px;
-    z-index: 1;
+    z-index: 999;
     border-radius: 15px;
     height: 175px;
     box-shadow:  0px 8px 8px 0px rgb(72, 72, 72);
@@ -119,7 +121,7 @@ section:first-child{
 }
 
 
-.drop-content a {
+#drop-content a {
     line-height: 1.5;
     color: rgb(72, 72, 72);
     text-decoration: none;
@@ -130,28 +132,27 @@ section:first-child{
     font-size: 13px;
 }
 
-/* falta espacio blanco arriba del color de fondo */
 
-.drop-content #categories{
+#drop-content #categories{
     background-color:  lightgray;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
 
-.drop-content #support{
+#drop-content #support{
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-.drop-content a:hover  {
+#drop-content a:hover  {
     background-color: rgb(240, 236, 236);
 }
 
-.drop-content #categories:hover  {
+#drop-content #categories:hover  {
     background-color: rgb(240, 236, 236);
 }
 
-.dropdownCategories:hover {
+#dropdownCategories:hover {
     color: rgb(230, 0, 18);
 }
 
@@ -164,14 +165,34 @@ section:first-child{
     gap: 2rem;
     padding: 5px 5px 5px 20px;
     vertical-align: middle; 
-}
+    transition: all 200ms ease-in-out 0s;
+} 
 
-.topRightItems a{
+.topRightItems a{ 
     text-decoration: none;
     border: none;
+    margin-top: 4px;
 }
 
-.linksignup{
+#mushroom {
+    height: 20px;
+    width: 60px;
+    margin-top: 4px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+    opacity: 1;
+    }
+    50% {
+    opacity: .5;
+    }
+}
+
+
+#linksignup {
+    display: none;
     border: none;
     background-color: transparent;
 }
@@ -180,40 +201,23 @@ section:first-child{
     margin: 0px 0.2rem 0px 0px;
     vertical-align: middle; 
     padding-bottom: 2px;
-} 
-
-
-.buttonLinkSupport:hover span {
-    color: rgb(230, 0, 18);
+    transition: all 200ms ease-in-out 0s;
 }
 
-.buttonLinkSupport:hover .svg path {
-    fill: rgb(230, 0, 18);
-}
-
-.buttonLinkWishlist:hover span {
-    color: rgb(230, 0, 18);
-}
-
-.buttonLinkWishlist:hover .svg path{
-    fill: rgb(230, 0, 18);
-}
-
-.buttonLinkCart:hover span {
-    color: rgb(230, 0, 18);
-}
-
-.buttonLinkCart:hover .svg path {
-    fill: rgb(230, 0, 18);
-}
-
+.buttonLinkSupport:hover span,
+.buttonLinkWishlist:hover span,
+.buttonLinkCart:hover span,
 .linksignup:hover span {
     color: rgb(230, 0, 18);
 }
 
-.linksignup:hover .svg path {
+.buttonLinkSupport:hover .svg path,
+.buttonLinkWishlist:hover .svg path, 
+.buttonLinkCart:hover .svg path,
+.linksignup:hover .svg path{
     fill: rgb(230, 0, 18);
 }
+
 
 .regionSelector{
     display: block;
@@ -234,8 +238,7 @@ section:first-child{
 
     .searchbutton, .searchTitle{
         padding-right: 50px; 
-    } 
-
+    }
 }
 
 
@@ -249,13 +252,19 @@ section:first-child{
         display: none;
     }
 
-    .buttonLinkSupport, .buttonLinkWishlist, .buttonLinkCart, .linksignup {
+    .buttonLinkSupport, .buttonLinkWishlist, .buttonLinkCart {
         display: none;
+    }
+
+    #mushroom,
+    #linksignup {
+        visibility: hidden;
     }
 
     header{
         background-color:  rgb(230, 0, 18);
         width: 100%;
     }
-
 }
+
+

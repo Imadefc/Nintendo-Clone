@@ -1,27 +1,32 @@
-*{
-    padding: 0;
-    margin: 0;
-    color: #484848;
-    line-height: 1.4;
-    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    box-sizing: border-box;
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src:url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
 }
 
-.headerHidden {
+#headerHidden {
     visibility: hidden;
     display: flex;
     align-items: center; 
     height: 52px;
     border-bottom: 1px solid rgb(218, 218, 218);
     background-color: rgb(255, 255, 255);
-    position: relative;
-    z-index: 2001;
+    z-index: 599;
     position: fixed;
     width: 100%;
+    transition: opacity 1s ease;
+    opacity: 0;
 }
+
+.topics li a,
+.trendingTopics,
+.topstoreproducts,
+#insideStoreProducts{
+    font-size: 16px;
+}
+
 
 #logo {
     width: 105px;
@@ -133,11 +138,12 @@ section:first-child{
     fill: rgb(230, 0, 18);
 }
 
-.toclosebutton {
+#toclosebutton {
     display: block;
     border: none;
     background: none;
     padding-left: 780px;
+    transition: opacity 1s ease;
 }
 
 .dropsearchtopicsContainer {
@@ -147,14 +153,15 @@ section:first-child{
     z-index: 2001;
     background-color:  rgb(255, 255, 255);
     width: 100%; 
-    height: 300px ;
+    height: 250px ;
     padding: 12px 121px 40px;
+    border-bottom: 1px solid rgb(218, 218, 218);
 }
 
 .dropdownsearchtopics {
     display: grid;
     width: 100%;
-    grid-template-columns: 35% 1fr;
+    grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr;
 }
 
@@ -172,31 +179,20 @@ section:first-child{
     color: rgb(230, 0, 18);
     text-decoration: none;
     margin: 0px 0px 8px;
+    transition: border-color 0.2s ease;
+    width: 100%;
 }
 
-/* chequear hover para opacity */
-
-.dropsearchtopicsContainer:hover #oledModel {
+.topics li a:hover{
     color: rgb(180, 39, 53);
 }
 
-.dropsearchtopicsContainer:hover #nintendoSwitch {
-    color: rgb(180, 39, 53);
+.topics li a:focus {
+    border: rgb(211, 116, 152) 2px solid;
+    border-radius: 20px;
 }
 
-.dropsearchtopicsContainer:hover #brosWonder {
-    color: rgb(180, 39, 53);
-}
-
-.dropsearchtopicsContainer:hover #switchGames {
-    color: rgb(180, 39, 53);
-}
-
-.dropsearchtopicsContainer:hover #zeldaGames {
-    color: rgb(180, 39, 53);
-}
-
-.topStoreProducts {
+#topStoreProducts {
     grid-column-start: 2;
     grid-column-end: 3;
 }
@@ -211,9 +207,10 @@ section:first-child{
     display: block;
 }
 
-.insideStoreProducts {
+#insideStoreProducts {
     display: grid;
-    grid-template-columns: 342px 342px;
+    opacity: 0;
+    grid-template-columns: 341px 341px;
     grid-template-rows: 79px 79px;
     gap: 1rem; 
     margin: 0px 0px 24px;
@@ -226,6 +223,7 @@ section:first-child{
     border-radius: 15px;
     display: flex;
     position: relative;
+    text-decoration: none;
 }
 
 .containerRedEdition {
@@ -235,9 +233,7 @@ section:first-child{
 }
 
 
-/* cambiar font-weigth */
 .redEdition .oledRed {
-    font-size: 14px;
     grid-row: 1;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -245,7 +241,10 @@ section:first-child{
     padding-left: 8px;
 }
 
-.redEdition:hover .oledRed {
+.redEdition:hover .oledRed,
+.mariorpg:hover .RPG,
+.superwonder:hover .wonderbros,
+.moveIt:hover .moveit  {
     color: rgb(230, 0, 18);
 }
 
@@ -259,6 +258,24 @@ section:first-child{
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+    transition: all 0.2s linear;
+}
+
+.mascara {
+    width: 140px;
+    height: 77px;
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    opacity: 0;
+    background-color: rgba(156, 158, 158, 0.7);
+}
+
+.redEdition:hover .mascara,
+.mariorpg:hover .mascara,
+.superwonder:hover .mascara,
+.moveIt:hover .mascara {
+    opacity: 1;
 }
 
 
@@ -283,10 +300,8 @@ section:first-child{
     padding-left: 6px; 
     margin-top: 7px;
     font-weight: 300;
-    font-size: 14px;
 }
 
-/* falta animación */
 .addtoheart {
     display: block;
     width: 2.125rem;
@@ -303,11 +318,16 @@ section:first-child{
     position: relative;
 }
 
-/* falta animación */
 .addtoheart svg path {
-    transform-origin: 27px 27px;
-    animation: auto ease 0s 1 normal none running none;
-    color:rgb(230, 0, 18);
+    color:rgb(189, 7, 23);
+}
+
+.sparks {
+    display: none; 
+}
+
+.addtoheart:hover .sparks {
+    display: block;
 }
 
 .addtoheart .tooltip {
@@ -318,18 +338,16 @@ section:first-child{
     color: #484848;
     text-align: center;
     z-index: 1;
-    font-size: 11px;
-    font-weight: 300;
     border:#484848 solid 1px;
     padding: 3px;
     top: 100%;
     left: 80%;
+    font-size: 11px;
 }
 
 .addtoheart:hover .tooltip {
     visibility: visible;
 }
-
 
 .mariorpg {
     grid-row: 2;
@@ -338,6 +356,7 @@ section:first-child{
     border-radius: 15px;
     display: flex;
     position: relative;
+    text-decoration: none;
 }
 
 .containerMariorPG {
@@ -347,16 +366,11 @@ section:first-child{
 }
 
 .mariorpg .RPG {
-    font-size: 14px;
     grid-row: 1;
     grid-column-start: 2;
     grid-column-end: 4;
     padding-top: 5px;
     padding-left: 8px;
-}
-
-.mariorpg:hover .RPG {
-    color: rgb(230, 0, 18);
 }
 
 
@@ -370,6 +384,7 @@ section:first-child{
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+    transition: all 0.2s linear;
 }
 
 .downMariorRPG {
@@ -392,7 +407,6 @@ section:first-child{
     padding-top: 4px;
     padding-left: 6px; 
     font-weight: 300;
-    font-size: 14px;
 }
 
 .superwonder {
@@ -402,6 +416,7 @@ section:first-child{
     border-radius: 15px;
     display: flex;
     position: relative;
+    text-decoration: none;
 }
 
 .containerWonder{
@@ -418,9 +433,6 @@ section:first-child{
     padding-left: 8px;
 }
 
-.superwonder:hover .wonderbros {
-    color: rgb(230, 0, 18);
-}
 
 .superwonder img {
     display: block;
@@ -433,6 +445,7 @@ section:first-child{
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 2;
+    transition: all 0.2s linear;
 }
 
 .downWonder {
@@ -451,6 +464,7 @@ section:first-child{
     border-radius: 15px;
     display: flex;
     position: relative;
+    text-decoration: none;
 }
 
 .containerWario {
@@ -467,9 +481,6 @@ section:first-child{
     padding-left: 8px;
 }
 
-.moveIt:hover .moveit {
-    color: rgb(230, 0, 18);
-}
 
 .moveIt img {
     display: block;
@@ -481,23 +492,8 @@ section:first-child{
     grid-row-start: 1;
     grid-row-end: 3;
     grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-/* chequear hover de imagen */
-
-.moveIt img::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    opacity: 0; 
-    transition: opacity 200ms ease-in-out 25ms;
-}
-
-.moveIt img:hover::before {
-    opacity: 1;
+    grid-column-end: 2; 
+    transition: all 0.2s linear;
 }
 
 
@@ -511,5 +507,48 @@ section:first-child{
 }
 
 
+#estrellaContainer {
+    display: grid;
+    grid-template-columns: 342px 342px;
+    grid-template-rows: 79px 79px;
+    gap: 1rem; 
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
+@keyframes pulse {
+    0%, 100% {
+    opacity: 1;
+    }
+    50% {
+    opacity: .5;
+    }
+}
+
+#fondoEstrella1 {
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#fondoEstrella2 {
+    width: 100%;
+    height: 100%;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#fondoEstrella3 {
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#fondoEstrella4 {
+    width: 100%;
+    height: 100%;
+    grid-row: 2;
+    grid-column: 2;
+}
 

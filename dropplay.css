@@ -7,70 +7,65 @@
 }
 
 
-#gamesContainer {
+#playContainer {
     visibility: hidden;
     display: flex;
     flex-direction: column; 
     top: calc(100% + 2px);
     position: absolute;
+    z-index: 699;
     background-color:  rgb(255, 255, 255);
-    padding: 0px 00px 40px;
+    padding-right: 20px;
     width: 100%;
     left: 0%;
-    height: 165px;
+    height: 140px;
     border-bottom: 1px solid  rgb(218, 218, 218);
     transition: opacity 1s ease;
     opacity: 0;
 }
 
-.XIconButton{
+.playcloseContainer {
     display: flex;
     justify-content: flex-end ;
     height: 30px;
     padding-top: 5px;
-    margin-right: 20px;
 }
 
-.XIconButton svg {
-    padding: 0px;
+.playcloseContainer svg {
+    padding: 0px 20px 0px 0px;
 }
 
-.XIconButton svg path{
+.playcloseContainer svg path{
     color: rgb(200, 200, 200);
 }
 
-.XIconButton:hover svg path{
+.playcloseContainer:hover svg path{
     color: #484848;
 }
 
-#toclosebuttongames {
+#toclosebuttonplay {
     background-color: transparent;
     border: none;
 }
 
-.gamesbuttonsContainer{
+.playButtonsContainer {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
     gap: 1.75rem;
     width: 100%;
-    height: 150px;
+    height: 140px;
 }
 
-.games1Container,
-.games2Container,
-.games3Container,
-.games4Container {
+.playkidsWrapper,
+.playparentsWrapper {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.games1svgContainer,
-.games2svgContainer,
-.games3svgContainer,
-.games4svgContainer{
+.playkidssvgContainer,
+.playparentssvgContainer{
     display: flex;
     border: 1px lightgray solid;
     border-radius: 15px;
@@ -79,49 +74,33 @@
     width: 120px;
     height: 70px;
     margin-bottom: 8px;
-    margin-top: 10px;
 }
 
-.games1svgContainer svg,
-.games2svgContainer svg,
-.games3svgContainer svg,
-.games4svgContainer svg{
-    padding: 0px;
-}
-
-.gamesName1 {
+.playNames {
     display: block;
     width: 120px;
     margin-left: 3px;
     text-align: center;
+    margin-bottom: 5px;
     font-weight: 300;
 }
 
-.gamesName2 {
-    display: block;
-    width: 90px;
-    margin-left: 15px;
-    text-align: center;
-    font-weight: 300;
-}
-
-.games1Container:hover .gamesName1,
-.games2Container:hover .gamesName2,
-.games3Container:hover .gamesName2,
-.games4Container:hover .gamesName2 {
+.playkidsWrapper:hover .playNames,
+.playparentsWrapper:hover .playNames  {
     color: rgb(230, 0, 18);
 }
 
-.games1svgContainer:hover svg path,
-.games2svgContainer:hover svg path,
-.games3svgContainer:hover svg path,
-.games4svgContainer:hover svg path{ 
-    fill: rgb(255, 255, 255);
+.playparentssvgContainer:hover,
+.playkidssvgContainer:hover {
+    background-color: rgb(230, 0, 18);
 }
 
-.games1svgContainer:hover,
-.games2svgContainer:hover,
-.games3svgContainer:hover,
-.games4svgContainer:hover {
-    background-color: rgb(230, 0, 18);
+.playparentssvgContainer svg,
+.playkidssvgContainer svg{
+    padding: 0px;
+}
+
+.playkidssvgContainer:hover svg path,
+.playparentssvgContainer:hover svg path{ 
+    fill: rgb(255, 255, 255);
 }
