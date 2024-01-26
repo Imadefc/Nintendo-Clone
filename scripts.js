@@ -23,6 +23,35 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 3000);
 });
 
+//Dropdown categories change name:
+var dropContent = document.getElementById("drop-content");
+var dropdownCategories = document.getElementById("dropdownCategories");
+
+document.getElementById("drop-content").addEventListener("click", function(e) {
+    if (e.target.tagName === "A") {
+    var selectedCategory = e.target.textContent;
+    dropdownCategories.textContent = selectedCategory;
+    dropdownCategories.classList.add("selected"); // Agregar clase para cambiar el color
+    dropContent.style.display = "none";
+    }
+});
+
+dropdownCategories.addEventListener("click", function() {
+    dropContent.style.display = (dropContent.style.display === "block") ? "none" : "block";
+});
+
+  // Close the dropdown when clicking outside of it
+window.addEventListener("click", function(e) {
+    if (!e.target.matches("#dropdownCategories") && !e.target.matches("#drop-content")) {
+    dropContent.style.display = "none";
+    }
+});
+
+
+
+
+
+
 //Account responsive loader:
 document.addEventListener("DOMContentLoaded", function() {
     const animatedImage = document.getElementById("spinner");
