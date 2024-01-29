@@ -44,11 +44,7 @@
     height: 20px;
 }
 
-.headerLeft{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+
 
 .searchContainerHidden {
     display: flex;
@@ -322,38 +318,12 @@
     color:rgb(189, 7, 23);
 }
 
-.sparks{
-    opacity: 0;
-    transition-timing-function: ease;
+.sparks {
+    display: none; 
 }
 
-.heart-filled{
-    opacity: 0;
-}
-
-.addtoheart:hover .sparks{
-    animation: sparksAnimation 1s;
-    color: rgb(189, 7, 23);
-    
-    
-}
-.addtoheart:hover .heart-outline{
-    color: rgb(189, 7, 23);
-}
-
-@keyframes sparksAnimation {
-    from{
-        opacity: 0;
-    }
-    75%{
-        opacity: 1;
-        stroke-dasharray: 8;
-        stroke-dashoffset: 24;  
-    }
-    to{
-        opacity: 1;
-        
-    }
+.addtoheart:hover .sparks {
+    display: block;
 }
 
 .addtoheart .tooltip {

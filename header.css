@@ -36,7 +36,7 @@ header{
     height: 20px;
 }
 
-.headerLeft{
+.style_Flex:first-child{
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -98,10 +98,6 @@ header{
     all: unset;
     width: 110px;
     text-align: left;
-}
-
-#dropdownCategories.selected {
-    color: rgb(230, 0, 18); 
 }
 
 .dropCategories {

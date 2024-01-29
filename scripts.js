@@ -49,6 +49,9 @@ window.addEventListener("click", function(e) {
 
 
 
+
+
+
 //Account responsive loader:
 document.addEventListener("DOMContentLoaded", function() {
     const animatedImage = document.getElementById("spinner");
