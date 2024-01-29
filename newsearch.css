@@ -1,0 +1,580 @@
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src:url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+#headerHidden {
+    visibility: hidden;
+    display: flex;
+    align-items: center; 
+    height: 52px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    background-color: rgb(255, 255, 255);
+    z-index: 599;
+    position: fixed;
+    width: 100%;
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+.topics li a,
+.trendingTopics,
+.topstoreproducts,
+#insideStoreProducts{
+    font-size: 16px;
+}
+
+
+#logo {
+    width: 105px;
+    height: 52px;
+    background-color: rgb(230, 0, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 0px;
+}
+
+#logo img {
+    width: 69px;
+    height: 20px;
+}
+
+.headerLeft{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchContainerHidden {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #484848;
+    height: 2.125rem;
+    width: 40%;
+    margin-left: 10px;
+}
+
+.searchContainerHidden:hover{
+    border-bottom: 1px solid  rgb(230, 0, 18);;
+}
+
+.searchHidden {
+    width: 100%;
+}
+
+.searchHidden:hover .tosearch{ 
+    color: rgb(230, 0, 18);
+}
+
+.searchHidden:hover svg path{
+    fill: rgb(230, 0, 18);
+}
+
+.dropsearchHidden {
+    display: flex;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 52px;
+    background-color: rgb(255, 255, 255);
+}
+
+.dropsearchContainerHidden{
+    display: inline-flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    height: 52px;
+}
+
+.searchbuttonHidden{
+    width:100%;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+}
+
+#lupaHidden {
+    margin-right: 10px;
+    display: inline-flex;
+    position: relative;
+    justify-content: left;
+    border: none;
+    width: 18px;
+    height: 18px;
+}
+
+.searchContainerHidden .toSearch {
+    width: 100%;
+    border: none;
+    display: inline-flex;
+    font-weight: 400;
+}
+
+.dropdownCategoriesHidden {
+    background-color: transparent;
+    border: none;
+    width: 160px;
+    padding: 0px 8px 0px 7px;
+    text-align: left;
+}
+
+.dropCategoriesHidden {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+}
+
+.dropdownCategoriesHidden:hover {
+    color: rgb(230, 0, 18);
+}
+
+.dropCategoriesHidden:hover svg path{
+    fill: rgb(230, 0, 18);
+}
+
+#toclosebutton {
+    display: block;
+    border: none;
+    background: none;
+    padding-left: 780px;
+    transition: opacity 1s ease;
+}
+
+.dropsearchtopicsContainer {
+    display: block;
+    top: 100%;
+    position: absolute;
+    z-index: 2001;
+    background-color:  rgb(255, 255, 255);
+    width: 100%; 
+    height: 250px ;
+    padding: 12px 121px 40px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.dropdownsearchtopics {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 1fr;
+}
+
+.dropsearchtopics {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.dropsearchtopics .topics li {
+    display: flex;
+    list-style: none;
+}
+
+.dropsearchtopicsContainer .topics a{
+    color: rgb(230, 0, 18);
+    text-decoration: none;
+    margin: 0px 0px 8px;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+.topics li a:hover{
+    color: rgb(180, 39, 53);
+}
+
+.topics li a:focus {
+    border: rgb(211, 116, 152) 2px solid;
+    border-radius: 20px;
+}
+
+#topStoreProducts {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.trendingTopics  {
+    margin: 0px 0px 12px;
+    display: block;
+}
+
+.topstoreproducts {
+    margin: 0px 0px 12px;
+    display: block;
+}
+
+#insideStoreProducts {
+    display: grid;
+    opacity: 0;
+    grid-template-columns: 341px 341px;
+    grid-template-rows: 79px 79px;
+    gap: 1rem; 
+    margin: 0px 0px 24px;
+}
+
+.redEdition {
+    grid-row: 1;
+    grid-column: 1;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    text-decoration: none;
+}
+
+.containerRedEdition {
+    display: grid;
+    grid-template-columns: 140px 124px 64px ;
+    grid-template-rows: 46px 32px;
+}
+
+
+.redEdition .oledRed {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 4px;
+    padding-left: 8px;
+}
+
+.redEdition:hover .oledRed,
+.mariorpg:hover .RPG,
+.superwonder:hover .wonderbros,
+.moveIt:hover .moveit  {
+    color: rgb(230, 0, 18);
+}
+
+.redEdition img {
+    display: block;
+    width: 75px;
+    height: 76px;
+    overflow: hidden;
+    margin: 0px 20px 0px 30px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    transition: all 0.2s linear;
+}
+
+.mascara {
+    width: 140px;
+    height: 77px;
+    position: absolute;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    opacity: 0;
+    background-color: rgba(156, 158, 158, 0.7);
+}
+
+.redEdition:hover .mascara,
+.mariorpg:hover .mascara,
+.superwonder:hover .mascara,
+.moveIt:hover .mascara {
+    opacity: 1;
+}
+
+
+.downredEdition {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+.divisorazul {
+    color:#3946A0;
+    font-weight: 800;
+    font-size: larger;
+    padding-left: 8px;
+}
+
+.hardwareName {
+    padding-left: 6px; 
+    margin-top: 7px;
+    font-weight: 300;
+}
+
+.addtoheart {
+    display: block;
+    width: 2.125rem;
+    height: 2.125rem;
+    border: none;
+    appearance: none;
+    background: none;
+    font-size: 1em;
+    line-height: 1;
+    grid-row: 2;
+    grid-column: 3;
+    margin-top: 2px;
+    margin-left: 40px;
+    position: relative;
+}
+
+.addtoheart svg path {
+    color:rgb(189, 7, 23);
+}
+
+.sparks{
+    opacity: 0;
+    transition-timing-function: ease;
+}
+
+.heart-filled{
+    opacity: 0;
+}
+
+.addtoheart:hover .sparks{
+    animation: sparksAnimation 1s;
+    color: rgb(189, 7, 23);
+    
+    
+}
+.addtoheart:hover .heart-outline{
+    color: rgb(189, 7, 23);
+}
+
+@keyframes sparksAnimation {
+    from{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+        stroke-dasharray: 8;
+        stroke-dashoffset: 24;  
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+
+.addtoheart .tooltip {
+    position: absolute;
+    visibility: hidden;
+    width: 90px;
+    background-color: white;
+    color: #484848;
+    text-align: center;
+    z-index: 1;
+    border:#484848 solid 1px;
+    padding: 3px;
+    top: 100%;
+    left: 80%;
+    font-size: 11px;
+}
+
+.addtoheart:hover .tooltip {
+    visibility: visible;
+}
+
+.mariorpg {
+    grid-row: 2;
+    grid-column: 1;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    text-decoration: none;
+}
+
+.containerMariorPG {
+    display: grid;
+    grid-template-columns: 140px 124px 64px ;
+    grid-template-rows: 46px 32px;
+}
+
+.mariorpg .RPG {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+
+
+.mariorpg img {
+    display: block;
+    padding-left: 1px;
+    width: 140px;
+    height: 76px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    transition: all 0.2s linear;
+}
+
+.downMariorRPG {
+    display: inline-flex;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.divisor {
+    color:rgb(230, 0, 18);
+    font-weight: 800;
+    font-size: larger;
+    padding-left: 8px;
+}
+
+
+.switchName {
+    padding-top: 4px;
+    padding-left: 6px; 
+    font-weight: 300;
+}
+
+.superwonder {
+    grid-row: 1;
+    grid-column: 2;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    text-decoration: none;
+}
+
+.containerWonder{
+    display: grid;
+    grid-template-columns: 140px 124px 64px;
+    grid-template-rows: 46px 32px;
+}
+
+.superwonder .wonderbros {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+
+
+.superwonder img {
+    display: block;
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 140px;
+    height: 78px;
+    overflow: hidden;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    transition: all 0.2s linear;
+}
+
+.downWonder {
+    display: inline-flex;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+.moveIt {
+    grid-row: 2;
+    grid-column: 2;
+    border: rgb(218, 218, 218) solid 1px;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    text-decoration: none;
+}
+
+.containerWario {
+    display: grid;
+    grid-template-columns: 140px 124px 64px;
+    grid-template-rows: 46px 32px;
+}
+
+.moveIt .moveit {
+    grid-row: 1;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+
+
+.moveIt img {
+    display: block;
+    position: relative;
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 140px;
+    height: 79px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    transition: all 0.2s linear;
+}
+
+
+.downWario {
+    display: inline-flex;
+    align-items: flex-start;
+    height: 40%;
+    grid-row: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+#estrellaContainer {
+    display: grid;
+    grid-template-columns: 342px 342px;
+    grid-template-rows: 79px 79px;
+    gap: 1rem; 
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+    opacity: 1;
+    }
+    50% {
+    opacity: .5;
+    }
+}
+
+#fondoEstrella1 {
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#fondoEstrella2 {
+    width: 100%;
+    height: 100%;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#fondoEstrella3 {
+    width: 100%;
+    height: 100%;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#fondoEstrella4 {
+    width: 100%;
+    height: 100%;
+    grid-row: 2;
+    grid-column: 2;
+}
+
