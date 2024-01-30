@@ -52,16 +52,18 @@
 }
 
 .FooterContent {
-    height: 480px;
+    height: 800px;
     width: 100%;
 }
 
 .contenedorList {
     display: grid;
     column-gap: 16px;
-    row-gap: 30px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(auto-fit, 1fr));
+    row-gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    padding: 32px 16px;
+    height: 85%;
 }
 
 .contenedorIcon {
@@ -94,8 +96,8 @@
 .FooterContentListParents,
 .FooterContentListCommunity,
 .FooterContentListPrivacy {
-    width: 200px;
-    height: 80%;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;  
     align-items: flex-start;  
@@ -119,7 +121,7 @@
 .FooterContentListShop, 
 .FooterContentListStore,
 .FooterContentListSuport{
-    grid-row: span 2;
+    grid-row: auto;
 }
 
 .FooterContentList {
@@ -131,8 +133,8 @@
 
 
 .FooterContentListCommunity {
-    grid-column: 6;
-    grid-row: 1;
+    grid-column: auto;
+    grid-row: auto;
 }
 
 .FooterContentListPrivacy {
@@ -218,18 +220,11 @@
     border-bottom: white 2px solid;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
-#FooterNintendoLogo {
-    margin-right: 200px;
-}
     .contenedorList {
-        display: grid;
-        justify-content: center;
-        align-self: center;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr); 
-        width: 80%;
+        grid-template-rows: repeat(3, 1fr);
     }
 }
 
@@ -241,5 +236,16 @@
         flex-direction: column;
         align-items: center;
     }
-    
+
+    .FooterContentListPrivacy {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .contenedorIcon {
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
