@@ -153,16 +153,16 @@
 .FooterLegal {
     width: 100%;
     display: grid;
-    grid-template-columns: 60% 30% 10%;
+    grid-template-columns: 2fr 1fr 0.5fr;
     padding: 32px 16px;
-    background-color: rgb(45, 45, 45);
+    background-color: rgb(30, 30, 30);
     color: white;
     font-size: 12px;
 }
 
 .FooterLegalInfo {
     width: fit-content;
-    margin-left: 5%;
+    margin-left: 8%;
     margin-right: 20px;
     display: flex;
     align-items: center;
@@ -173,7 +173,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 18px;
     grid-column: 2;
     text-wrap: nowrap;
     white-space: nowrap;
@@ -234,7 +234,14 @@
     .FooterLegal {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        gap: 30px;
+    }
+
+    .FooterLegalInfo {
+        width: 50%;
+        text-align: center;
     }
 
     .FooterContentListPrivacy {
