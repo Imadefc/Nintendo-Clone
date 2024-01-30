@@ -1,0 +1,1232 @@
+@import url(tipografia.css);
+:root{
+    --radio-borde:0.75rem;
+    --radio-borde-pequeño:0.5rem;
+    --color-rojo:rgb(230, 0, 18);
+    --color-rojo-oscuro:#ac000d;
+    --color-gris-claro:rgb(114, 114, 114);
+    --color-letra: rgb(72, 72, 72) ;
+}
+body{
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    width: 100%;
+    line-height: 1.4;
+    color: rgb(72, 72, 72);
+    -webkit-font-smoothing: antialiased;
+}
+.contenedorEtiqueta{
+    padding-left: 1rem;
+    margin-bottom: 8px;
+}
+.contenedorFeatured{
+    width: 99%;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+}
+.plataformaJuegoDigital{
+    margin-left: 16px;
+    padding-left: 1ch;
+    color: var(--color-gris-claro);
+    font-size: 0.625rem;
+    font-weight: 300;
+    border-left: 2px solid var(--color-rojo);
+    margin-top: 0px;
+}
+.juegoImagen{
+    width: 100%;
+    border-top: 1px solid lightgray;
+    
+    border-top-right-radius: var(--radio-borde);
+    border-top-left-radius:var(--radio-borde) ;
+    transition: transform 0.3s;
+}
+.cartaProducto:hover .juegoImagen{
+    transform: translateY(-1rem);
+}
+.contenedorProducto{
+    display: flex;
+    flex-direction: row;
+    width: 130%;
+}
+
+.botonDerecho{
+    position: absolute;
+    height: 400px;
+    cursor: pointer;
+    padding: 16px;
+    border: 0;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(218, 218, 218);
+    border-radius:var(--radio-borde-pequeño) ;
+    transition: transform 0.3s;
+}
+.botonDerecho:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+.botonDerecho:hover svg{
+    color: white;
+    transform: scale(1.15);
+}
+@media(max-width:1210px){
+    .botonDerecho{
+        position: absolute;
+        height: 400px;
+        right: 12px;
+    }
+}
+@media(max-width:854px){
+    .botonDerecho{
+        position: absolute;
+        height: 400px;
+        right: 5px;
+    }
+}
+@media(max-width:429px){
+    .botonDerecho{
+        position: absolute;
+        height: 390px;
+        right: 0px;
+    }
+}
+.cartaProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 16.375rem;
+    min-width: 208px;
+    margin: 1.5rem 1rem;
+    border-radius:var(--radio-borde);
+    border-bottom: 1px solid lightgray ;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    transition: all 0.3s;
+
+}
+.dbs{
+    font-weight: 700;
+    line-height: 1.35;
+    font-size: 1.75rem;
+}
+.cartaProducto:hover .tituloFeatured{
+    color: var(--color-rojo);
+}
+.tituloFeatured{
+    font-weight: 700;
+    margin: 0;
+    font-size: 0.875rem;
+    padding-top: 16px;
+    padding-left: 1rem;
+    padding-right: 16px;
+    transition: 0.3s;
+    padding-bottom: 1rem;
+}
+#NewsAndEvents{
+    border: none;
+}
+#hardware{
+    border-left: 2px solid var(--color-gris-claro);
+}
+.EtiquetaEstado{
+    background-color: var(--color-rojo);
+    color: white;
+    border-radius:var(--radio-borde) ;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+#LearnMore{
+   background-color: rgb(75, 92, 206); 
+}
+
+#freeDownloadMorado{
+    background-color: rgb(149, 49, 185);;
+}
+/*Banner*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: var(--nintendo-font);
+    --nintendo-font:"museo-sans-700", -apple-system, BlinkMacSystemFont, sans-serif;
+    --color-font: rgb(72, 72, 72);
+    --font-weight-nintendo: 700;
+    --font-size-text: 0.875rem;
+    --line-text: 1.4;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+.BannerBody{
+    width: 100%;
+    position: relative;
+}
+.imagenFondoBanner{
+    top:0px;
+    position: absolute;
+    height: calc(100% - 11.4rem);
+    background-image: url(bg2.avif);
+    width: 100%;
+    left: 0px;
+    z-index: -1;
+}
+.imagenPrincipalBanner{
+    width: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+}
+.imgImagenPrincipalBanner{
+    border-radius: 1rem;
+    width: 100%;
+}
+.contendorImagenBanner{
+    display: block;
+    line-height: 0;
+    min-height: 1px;
+    width: 96%;
+    padding-top: 2rem;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pieImagenBanner{
+    width: 100%;
+    padding-top: 1.5rem;
+}
+.summaryBanner {
+    width: 90%;
+    line-height: var(--line-text);
+    height: 30px;
+    font-size: 28px;
+    margin-top:1.5rem;
+    color:rgb(72, 72, 72);
+  }
+.contenedorpieImagenBanner{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.FondoBanner{
+    background-image: url(bg2.avif);
+    width: 100%;
+}
+#botonrojoBanner {
+    background-color: rgb(230, 0, 18);
+    color: white;
+    border-radius: 10px;
+    height: 48px;
+    margin-left: 20px;
+    align-self: center;
+    border: 0;
+    padding: 0 24px 0 24px;
+    font-size: 18px;
+    transition: all 0.1s ease-in-out;
+}
+  
+#botonrojoBanner:hover {
+    background-color: rgb(193, 9, 24);
+    transform: scale(1.05);
+}
+#middlebuttonBanner{
+  align-self: flex-end;
+  padding-left: 20px;
+}
+#ratingtagBanner{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.ratingBanner{
+    justify-content: center;
+    line-height: var(--line-text);
+    font-size: 0.875rem;
+}
+.svgTamañoTeenBanner{
+    width: 80%;
+}
+
+@media (min-width:429px){
+    .cartaProducto{
+        width: calc((100% - 1rem) / 1.5);
+    }
+    .tituloFeatured{
+         font-size: 1rem;
+         margin: 0px;
+         text-align: initial;
+         padding-right: 1rem;
+    }
+    .plataformaJuegoDigital{
+        font-size: 0.875rem;
+    }
+    .dbs{
+        margin-left: 16px;
+        font-size: 1.3125rem;
+    }
+}
+/*Store*/
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-family: "Nintendo";
+    font-size: large;
+    color: rgb(72, 72, 72);
+    line-height: 1.4;
+}
+
+.OnlineStore {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.NintendoStore {
+    width: 1144px;
+    max-width: 95%;
+}
+
+.SectionHeader {
+    margin: 0;
+    width: fit-content;
+}
+
+.NintendoStoreResponsiveImage {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border-radius: 8px;
+}
+
+.MyNintendoStoreImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.MyNintendoStoreImageMobile {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.OnlineStoreDescription {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
+    max-width: 940px;
+    margin-right: 36px;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 29.4px;
+}
+
+.StartShoppingButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 169px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 12px;
+    background-color: #E60012;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    text-wrap: nowrap;
+    color: white;
+    overflow: visible;
+}
+
+/*
+BELOW GAMING SYSTEMS STYLE
+*/
+
+.GamingSystems {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.GamingSystemsContent {
+    max-width: 95%;
+    margin: auto;
+    width: 1144px;
+    display: flex;
+    flex-direction: column;
+}
+
+.GamingSystemsPicture {
+    width: 100%;
+}
+
+#GamingSystemsImg {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border-radius: 8px;
+}
+
+.GamingSystemsDescription {
+    display: flex;
+    align-items: center;
+}
+
+.ExploreGamingSystemsButton {
+    width: 169px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #E60012;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* HOVERS, ANIMATIONS AND RESPONSIVE */
+
+@keyframes ButtonHover {
+    0%   {transform:scale(1.0)}
+    25%  {transform:scale(1.09)}
+    50%  {transform:scale(1.05)}
+    100% {transform:scale(1.09)}
+}
+
+.StartShoppingButton:hover, .ExploreGamingSystemsButton:hover {
+    animation: ButtonHover 0.4s linear;
+    animation-fill-mode: forwards;
+    background-color: #c20010;
+}
+.GamingSystems {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1025px) {
+    .NintendoStoreResponsiveImage, #GamingSystemsImg {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .OnlineStoreDescription, .GamingSystemsDescription {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .StartShoppingButton, .ExploreGamingSystemsButton {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
+        
+        font-size: 18px;
+        font-weight: bolder;
+    }
+
+    .MyNintendoStoreImageMobile {
+        display: block;
+    }
+
+    .MyNintendoStoreImage {
+        display: none;
+    }
+}
+
+/*News*/
+* 
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: "Nintendo";
+    src: url(MuseoSans_700.ttf);
+}
+
+body
+{
+    font-family: "Nintendo";
+    line-height: 1.4;
+    box-sizing: border-box;
+}
+
+.section_general_news
+{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 48px 0px;    
+}
+
+/*p{
+    color: rgb(72, 72, 72);
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    
+}*/
+
+/*h3
+{
+    color: rgb(72, 72, 72);
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+}
+**/
+h4 
+{
+    color: rgb(72, 72, 72);
+    width: 100%;
+    height: 100%;
+}
+
+img 
+{
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor:hover img
+{
+        transition: all 0.6s ease;
+        filter: brightness(70%);
+        .red:hover{
+            color:  rgb(230, 0, 18);
+        }    
+}  
+    
+.contenedor:hover .red
+{
+        color:  rgb(230, 0, 18);
+}
+    
+.contenedor:hover .read_more
+{
+        color: darkred;
+        border-bottom-color: darkred ;
+}
+
+.contenedor
+{
+    width: 100%;
+}
+
+#grid-container 
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas:
+    "titulo titulo titulo titulo"
+    "card1 card1 card2 card2"
+    "card1 card1 card2 card2"
+    "card3 card4 card5 card6"
+    "boton none none none" ;
+    width: 1143.99px;
+    height: 1051.37px;
+    gap: 30px;
+    position: relative;
+}
+
+#titulo 
+{
+    grid-area: titulo;
+    font-weight: bold;
+    font-size: large;
+    color: rgb(72, 72, 72);
+    width: 70.8px;
+    height: 37.78px;
+}
+
+#card1 
+{
+    grid-area: card1;
+    width: 555.99px;
+    height: 547.89px;
+}
+
+#card2 
+{
+    grid-area: card2;
+    width: 555.99px;
+    height: 547.89px;
+}
+
+#card3 
+{
+    grid-area: card3;
+    width: 261.99px;
+    height: 321.74px;
+}
+
+#card4 
+{
+    grid-area: card4;
+    width: 261.99px;
+    height: 321.74px;
+}
+
+#card5
+{
+    grid-area: card5;
+    width: 261.99px;
+    height: 321.74px;
+}
+
+#card6
+{
+    grid-area: card6;
+    width: 261.99px;
+    height: 321.74px;
+}
+
+.boton_see_all
+{
+    background-color: rgb(230, 0, 18);
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold; 
+    border-radius: 5px;
+    grid-area: boton;
+    width: 251.18px;
+    height: 48.39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+}
+
+.news_tittle 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    height: 7rem;
+}
+
+@keyframes animacion_boton 
+{
+    0%   {transform:scale(1.0)}
+    25%  {transform:scale(1.09)}
+    50%  {transform:scale(1.05)}
+    100% {transform:scale(1.09)}  
+}
+
+.boton_see_all:hover 
+{
+    animation: animacion_boton 0.4s linear;
+    animation-fill-mode: forwards;
+    filter: brightness(70%);
+}
+ 
+/* svg 
+{
+    margin: 0px 16px 0px 0px;
+} */
+
+.read_more 
+{
+    color: rgb(230, 0, 18);
+    border: none;
+    border-bottom: 2px rgb(230, 0, 18)solid;
+    background-color: white;
+    font-weight: bold;
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px)
+{
+    #grid-container 
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas:
+        "titulo titulo titulo titulo"
+        "card1 card1 card2 card2"
+        "card1 card1 card2 card2"
+        "card3 card4 card5 card6"
+        "boton boton boton boton" ;
+        width: 1143.99px;
+        height: 1051.37px;
+        gap: 30px;
+    }
+
+    .boton_see_all
+    {
+        background-color: rgb(230, 0, 18);
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold; 
+        border-radius: 5px;
+        grid-area: boton;
+        width: 100%;
+        height: 48.39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;  
+    }
+
+    #card1,#card2
+    {
+        width: 467.45px;
+        height: 498.14px;
+    }
+
+    #card3,#card4,#card5,#card6 
+    {
+        width: 217.63px;
+        height: 296.86px;
+    }
+
+    img, h3, h4, p 
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+@media only screen and (min-width:320px) and (max-width:768px)
+{
+    #grid-container 
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas:
+        "titulo titulo titulo titulo"
+        "card1 card1 card1 card1"
+        "card2 card2 card2 card2"
+        "card3 card3 card4 card4"
+        "card5 card5 card6 card6"
+        "boton boton boton boton" ;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .boton_see_all
+    {
+        background-color: rgb(230, 0, 18);
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold; 
+        border-radius: 5px;
+        grid-area: boton;
+        width: 100%;
+        height: 48.39px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;  
+    }
+
+    img,p,h3,h4
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    #card1,#card2
+    {
+        width: 718.4px;
+        height: 639.3px;
+    }
+
+    #card3,#card4,#card5,#card6 
+    {
+        width: 347.2px;
+        height: 369.7px;
+    }
+    
+}
+/*Characters*/
+
+@import url(tipografia.css);
+body{
+    width: 100vw;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-family: var(--nintendo-font);
+    color: var(--color-font);
+    font-weight: var(--font-weight-nintendo);
+    font-size: var(--font-size-text);
+    line-height: var(--line-text);
+}
+*,::after,::before{
+    box-sizing: border-box;
+}
+body > section{
+    border-top: 1px lightgray solid;
+}
+.sectionCaracter{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    scroll-margin-top: 120px;
+}
+.contenedorCaracter{
+    display: block;
+    max-width: 71rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.gridCaracter{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.tituloCharacter{
+    font-weight: 700;
+    margin-block-start: 0px;
+    margin-block-end:0px;
+    grid-column: 1 / span 2;
+    font-size: 1.125rem;
+}
+.h1,.h2,.h3,.h4,.h5,.h6{
+    font-weight: 700;
+    letter-spacing: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    padding:0px;
+}
+.personaje{
+    display: flex;
+    flex-direction: column;
+}
+.enlacePersonaje{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+.fondoContenedor{
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15);
+    transition: 200ms ease-in-out 0s;
+}
+.enlacePersonaje{
+    cursor: pointer;
+}
+.fondoImagen{
+    display: block;
+    min-height: 1px;
+    width: 100%;
+    overflow-clip-margin: content-box;
+}
+.personajeContenedor{
+    display: block;
+    position: relative;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition:  200ms ease-in-out 0s;
+    
+}
+.enlacePersonaje:hover > .fondoContenedor{
+    transform: scale(1);
+}
+.enlacePersonaje:hover > .personajeContenedor{
+    transform: scale(1.15);
+}
+
+
+
+.personajeImagen{
+    display: block;
+    min-height: 1px;
+    width: 100%;
+    overflow-clip-margin: content-box;
+}
+.nombrePersonaje{
+    font-weight: 700;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    font-size: 1.125rem;
+}
+@media(min-width:768px){
+    .sectionCaracter{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .contenedorCaracter{
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gridCaracter{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .tituloCharacter{
+        grid-column: 1 / span 4;
+    }
+}
+@media(min-width:429px){
+    .tituloCharacter{
+        font-size: 1.75rem;
+    }
+    .nombrePersonaje{
+        font-size: 1.3125rem;
+    }
+}
+
+/*Digital Best Sellers*/
+
+@import url(tipografia.css);
+:root{
+    --radio-borde:0.75rem;
+    --radio-borde-pequeño:0.5rem;
+    --color-rojo:rgb(230, 0, 18);
+    --color-rojo-oscuro:#ac000d;
+    --color-gris-claro:rgb(114, 114, 114);
+    --color-letra: rgb(72, 72, 72) ;
+}
+
+.digitalHeader{
+    width: 100vw;
+    display: flex;
+    padding-top: 48px;
+    flex-direction: row;
+}
+.dbs{
+    font-weight: 700;
+    line-height: 1.35;
+    font-size: 1.75rem;
+    padding: 0px;
+    padding-right:16px;
+    border-right: 1px rgba(114, 114, 114, 0.5) solid;
+}
+#dnr{
+    padding-top: 0px;
+}
+.seefullList{
+    text-decoration: none;
+    color: var(--color-rojo);
+    align-self: center;
+    margin-left: 16px;
+    font-weight: bolder;
+    border-bottom: 2px solid var(--color-rojo);
+    transition: 0.3s;
+}
+.seefullList:hover{
+    color: var(--color-rojo-oscuro);
+    border-bottom: 2px solid var(--color-rojo-oscuro);
+}
+.digitalHeader , .contenedorDigital, .footerDigitalJuegos{
+    width: 96%;
+    overflow: hidden;
+    max-width: 71.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.contenedorDigital{
+    margin-bottom: 2rem;
+}
+.digitalNewReleases{
+    width: 120%;
+    display: flex;
+    overflow: hidden;
+    
+}
+.juegoDigital{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 16.375rem;
+    min-width: 208px;
+    margin: 1.5rem 1rem;
+    border-radius:var(--radio-borde);
+    border-bottom: 1px solid lightgray ;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+
+}
+.juegoImagen{
+    width: 100%;
+    border-top-right-radius: var(--radio-borde);
+    border-top-left-radius:var(--radio-borde) ;
+    transition: transform 0.3s;
+}
+.juegoDigital:hover .juegoImagen{
+    transform: translateY(-1rem);
+}
+.tituloJuegoDigital{
+    font-weight: 700;
+    margin: 0;
+    font-size: 0.875rem;
+    padding-top: 16px;
+    padding-left: 1rem;
+    padding-right: 16px;
+    transition: 0.3s;
+}
+.juegoDigital:hover .tituloJuegoDigital{
+    color: var(--color-rojo);
+}
+
+.fechaJuegoDigital{
+    color:var(--color-gris-claro) ;
+    padding-left: 1rem;
+    font-size: 0.625rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    
+}
+.precioJuegoDigital{
+    padding-left: 1rem;
+    font-weight: bolder;
+    margin: 0px;
+    font-size: 1rem;
+}
+.precioYDisponibilidad{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.contenedorEtiquetaJuego{
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.finalJuegoDigital{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.plataformaJuegoDigital{
+    margin-left: 16px;
+    padding-left: 1ch;
+    color: var(--color-gris-claro);
+    font-size: 0.625rem;
+    font-weight: 300;
+    border-left: 2px solid var(--color-rojo);
+}
+.svgCorazonDigital{
+    width: 3em;
+    height: 3em;
+    color: var(--color-rojo);
+    padding-right: 16px;
+}
+.botonDerecho{
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    padding: 16px;
+    border: 0;
+    right: 108px;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(218, 218, 218);
+    border-radius:var(--radio-borde-pequeño) ;
+    transition: transform 0.3s;
+}
+.botonDerecho:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+.botonDerecho:hover svg{
+    color: white;
+    transform: scale(1.15);
+}
+.etiquetaJuego{
+    font-weight: 700;
+    background-color:rgb(149, 49, 185) ;
+    color: white;
+    margin-left: 16px;
+    border-radius: var(--radio-borde);
+    font-size: 0.75rem;
+    padding: 3px;
+}
+
+.sparks{
+    opacity: 0;
+    transition-timing-function: ease;
+}
+
+.heart-filled{
+    opacity: 0;
+}
+
+.svgCorazonDigital:hover .sparks{
+    animation: sparksAnimation 1s;
+    color: var(--color-rojo-oscuro);
+    
+    
+}
+.svgCorazonDigital:hover .heart-outline{
+    color: var(--color-rojo-oscuro);
+}
+@keyframes sparksAnimation {
+    from{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+        stroke-dasharray: 8;
+        stroke-dashoffset: 24;  
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+.footerDigitalJuegos{
+    margin-bottom: 64px;
+}
+
+.textoFooterDigitalJuegos{
+    font-size: 0.75rem;
+    color: var(--color-gris-claro);
+    font-weight: 300;
+}
+.enlaceEnFooterDigitalJuegos{
+    text-decoration: none;
+    color: var(--color-rojo);
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-rojo);
+    transition:0.3s;
+    
+}
+.enlaceEnFooterDigitalJuegos:hover{
+    color: var(--color-rojo-oscuro);
+    border-bottom: 2px solid var(--color-rojo-oscuro);
+}
+
+
+
+@media(min-width:1025px){
+    :root{
+        --radio-borde:1rem;
+    }
+}
+@media(max-width:1025px){
+    
+}
+@media(max-width:1210px){
+    .botonDerecho{
+        position: absolute;
+        height: 420px;
+        right: 12px;
+    }
+}
+@media(max-width:768px){
+    .digitalHeader{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        scroll-margin-top: 120px;
+    }
+    .digitalHeader , .contenedorDigital, .footerDigitalJuegos{
+        max-width: 71.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    
+}
+@media(max-width:854px){
+    .botonDerecho{
+        position: absolute;
+        height: 400px;
+        right: 5px;
+    }
+}
+@media(max-width:429px){
+    .botonDerecho{
+        position: absolute;
+        height: 390px;
+        right: 0px;
+    }
+    .digitalHeader{
+        display: block;
+    }
+    .dbs{
+        margin-left: 16px;
+        font-size: 1.3125rem;
+    }
+}
+@media (min-width:429px){
+    .tituloJuegoDigital{
+         font-size: 1rem;
+         margin: 0px;
+         text-align: initial;
+         padding-right: 1rem;
+    }
+    .juegoDigital{
+     width: calc((100% ) / 1.5) ;
+    }
+    .fechaJuegoDigital{
+        margin-top: 0.25rem;
+        font-size: 0.75rem;
+    }
+    .plataformaJuegoDigital{
+        font-size: 0.875rem;
+    }
+    .etiquetaJuego{
+        margin-bottom: 16px;
+    }
+    .contenedorEtiquetaJuego{
+        margin-bottom: 8px;
+    }
+    
+ 
+ }
+@media (min-width: 768px){
+    .juegoDigital{
+        width: calc((100% ) / 2.5);
+    }
+    
+}
+@media (min-width: 1025px){
+    .juegoDigital{
+        width: calc((100% ) / 3.5);
+    }
+    
+}
