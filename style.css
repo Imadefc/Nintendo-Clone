@@ -1238,6 +1238,7 @@ img
     }
     
 }
+
 /*Footer*/
 .FooterHeader {
     width: 100%;
@@ -1248,16 +1249,22 @@ img
 .FooterHeaderLogos {
     display: grid;
     align-items: center;
-    justify-items: center;
+    justify-items: right;
     grid-template-columns: auto repeat(4, 58px);
     gap: 20px;
+    width: 100%;
+}
+
+.FooterHeaderLink {
+    width: 300px;
+    justify-self: left ;
 }
 
 #FooterNintendoLogo {
     width: 195px;
     height: 48px;
     fill: white;
-    margin-right: 950px;
+    margin-right: auto;
 }
 
 .FooterRRSSIcon {
@@ -1271,39 +1278,94 @@ img
 }
 
 .FooterContent {
-    height: 480px;
     width: 100%;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FooterContent a {
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: rgb(230, 0, 18);
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.contenedorList a {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
 .contenedorList {
+    width: 95vw;
+    margin: 16px 20px 16px 20px;
     display: grid;
-    justify-content: center;
-    align-self: center;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    height: 380px;
-    padding: 32px 36px;
-    transition: border-bottom-color 200ms ease-in-out 25ms, color 200ms ease-in-out 25ms;
+    column-gap: 16px;
+    row-gap: 30px;
+    grid-template-areas: 
+    "About Shop Store Suport Parents Community"
+    "About Shop Store Suport Privacy ...";
+}
+
+/*Footer Grid Areas*/
+
+.FooterContentListAbout {
+    grid-area: About;
+}
+
+.FooterContentListShop {
+    grid-area: Shop;
+}
+
+.FooterContentListStore {
+    grid-area: Store;
+}
+
+.FooterContentListSuport {
+    grid-area: Suport;
+}
+
+.FooterContentListParents {
+    grid-area: Parents;
+}
+
+.FooterContentListCommunity {
+    grid-area: Community;
+}
+
+.FooterContentListPrivacy {
+    grid-area: Privacy;
+}
+
+/*Footer Grid Areas END*/
+
+.contenedorIcon {
+    width: 95vw;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .FooterContent .headingFooter {
     color: #484848; 
     font-weight: bolder;
-    transition: border-bottom-color 200ms ease-in-out 25ms, color 200ms ease-in-out 25ms;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
     margin-bottom: 10px;
 }
 
 
 .FooterContent .headingFooter:hover {
-    border-bottom:rgb(146, 16, 27) 2.5px solid;
+    border-bottom:2px solid rgb(176, 0, 15);
+    color: #484848;
 }
 
 .contenedorList a:hover {
-    border-bottom:rgb(146, 16, 27) 2.5px solid;
-    color: rgb(146, 16, 27);
+    border-bottom: 2px solid rgb(176, 0, 15);
+    color: rgb(176, 0, 15);
 }
-
 
 .FooterContentListAbout,
 .FooterContentListShop,
@@ -1312,8 +1374,7 @@ img
 .FooterContentListParents,
 .FooterContentListCommunity,
 .FooterContentListPrivacy {
-    width: 200px;
-    height: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;  
     align-items: flex-start;  
@@ -1324,80 +1385,41 @@ img
     border: none;
 }
 
-.FooterContent a {
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(230, 0, 18);
-    margin-left: 15px;
-    font-size: 16px;
-    line-height: 2;
-}
-
-.FooterContentListAbout,
-.FooterContentListShop, 
-.FooterContentListStore,
-.FooterContentListSuport{
-    grid-row: span 2;
-}
-
-.FooterContentList {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-
-.FooterContentListCommunity {
-    grid-column: 6;
-    grid-row: 1;
-}
-
-.FooterContentListPrivacy {
-    grid-column: 5;
-    grid-row: 2;
-}
-
-.contenedorIcon {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: right;
-    padding-right: 16px;
-}
-
 .FooterLegal {
-    display: grid;
-    grid-template-columns: 60% 30% 10%;
     width: 100%;
-    height: 100px;
-    padding: 16px 32px;
-    background-color: rgb(45, 45, 45);
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr;
+    padding: 32px 16px;
+    background-color: rgb(30, 30, 30);
     color: white;
     font-size: 12px;
 }
 
 .FooterLegalInfo {
+    width: fit-content;
+    margin-left: 8%;
+    margin-right: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
     grid-column: 1;
-    margin-left: -30px;
-    margin-right: 20px;
 }
 
 .FooterLegalLinks {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 18px;
     grid-column: 2;
+    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .FooterLegalLinks a {
     font-weight: bold;
     text-decoration: none;
     color: white;
-    margin-right: 15px;
+    border: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
 .FooterLanguageSelection {
@@ -1410,11 +1432,11 @@ img
 .FooterLanguageSelection a{
     font-weight: bold;
     text-decoration: none;
+    text-wrap: nowrap;
+    white-space: nowrap;
     color: white;
-}
-
-.FooterLegalLinks a:hover {
-    border-bottom: rgb(230, 0, 18) 1px solid;
+    border: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
 #FooterLanguageSelectionUSA {
@@ -1425,6 +1447,61 @@ img
     border: white 0.5px solid
 }
 
-.lang:hover {
-    border-bottom: white 1px solid;
+.FooterLegalLinks a:hover {
+    border-bottom: solid 2px rgb(230, 0, 18);
 }
+
+.lang:hover {
+    border-bottom: white 2px solid;
+}
+
+/* FOOTER CONTENT MEDIA QUERIES */
+
+@media screen and (max-width: 1440px) {
+    .contenedorList {
+        grid-template-areas: 
+        "About Shop Store Suport"
+        "Parents Community Privacy ...";
+    }
+}
+
+@media (max-width: 1025px) {
+    .contenedorList {
+        grid-template-areas: 
+        "About Shop Store"
+        "Suport Parents Community"
+        "Suport Privacy ...";
+    }
+}
+
+/* FOOTER CONTENT MEDIA QUERIES END */
+
+/* FOOTER LEGAL MEDIA QUERIES */
+
+@media screen and (max-width: 1025px) {
+    .FooterLegal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .FooterLegalInfo {
+        width: 50%;
+        text-align: center;
+    }
+
+    .FooterContentListPrivacy {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .contenedorIcon {
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+/* FOOTER LEGAL MEDIA QUERIES END */
