@@ -7,15 +7,22 @@
     --color-gris-claro:rgb(114, 114, 114);
     --color-letra: rgb(72, 72, 72) ;
 }
+*,::before,::after{
+    box-sizing: border-box;
+}
 body{
-    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 16px;
+    
+    padding: 0px;
+    margin: 0px;
     width: 100%;
-    line-height: 1.4;
-    color: rgb(72, 72, 72);
+    font-family: var(--nintendo-font);
+    color: var(--color-font);
+    font-weight: var(--font-weight-nintendo);
+    font-size: var(--font-size-text);
+    line-height: var(--line-text);
     -webkit-font-smoothing: antialiased;
 }
-.contenedorEtiqueta{
+.contenedorEtiquetaFetured{
     padding-left: 1rem;
     margin-bottom: 8px;
 }
@@ -25,14 +32,15 @@ body{
     padding-bottom: 3rem;
     padding-top: 2rem;
 }
-.plataformaJuegoDigital{
+.plataformaJuegoDigitalFetured{
     margin-left: 16px;
     padding-left: 1ch;
     color: var(--color-gris-claro);
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     font-weight: 300;
     border-left: 2px solid var(--color-rojo);
     margin-top: 0px;
+    margin-bottom: 1rem;
 }
 .juegoImagen{
     width: 100%;
@@ -51,9 +59,9 @@ body{
     width: 130%;
 }
 
-.botonDerecho{
+.botonDerechoFeatured{
     position: absolute;
-    height: 400px;
+    height: 350px;
     cursor: pointer;
     padding: 16px;
     border: 0;
@@ -63,32 +71,35 @@ body{
     border-radius:var(--radio-borde-pequeño) ;
     transition: transform 0.3s;
 }
-.botonDerecho:hover{
+.botonDerechoFeatured:hover{
     background: rgba(0, 0, 0, 0.6);
 }
-.botonDerecho:hover svg{
+.botonDerechoFeatured:hover svg{
     color: white;
     transform: scale(1.15);
 }
 @media(max-width:1210px){
-    .botonDerecho{
+    .botonDerechoFeatured{
         position: absolute;
-        height: 400px;
+        height: 350px;
         right: 12px;
     }
 }
 @media(max-width:854px){
-    .botonDerecho{
+    .botonDerechoFeatured{
         position: absolute;
-        height: 400px;
+        height: 350px;
         right: 5px;
     }
 }
 @media(max-width:429px){
-    .botonDerecho{
+    .botonDerechoFeatured{
         position: absolute;
-        height: 390px;
+        height: 350px;
         right: 0px;
+    }
+    .plataformaJuegoDigitalFetured{
+        font-size: 0.625rem;
     }
 }
 .cartaProducto{
@@ -117,6 +128,7 @@ body{
 .tituloFeatured{
     font-weight: 700;
     margin: 0;
+    height:8rem;
     font-size: 0.875rem;
     padding-top: 16px;
     padding-left: 1rem;
@@ -147,24 +159,9 @@ body{
 }
 /*Banner*/
 
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: var(--nintendo-font);
-    --nintendo-font:"museo-sans-700", -apple-system, BlinkMacSystemFont, sans-serif;
-    --color-font: rgb(72, 72, 72);
-    --font-weight-nintendo: 700;
-    --font-size-text: 0.875rem;
-    --line-text: 1.4;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    user-select: none;
-}
 .BannerBody{
-    width: 100%;
     position: relative;
+    width: 100%;
 }
 .imagenFondoBanner{
     top:0px;
@@ -199,17 +196,19 @@ body{
     padding-top: 1.5rem;
 }
 .summaryBanner {
-    width: 90%;
+    
     line-height: var(--line-text);
     height: 30px;
-    font-size: 28px;
+    font-size: 1.3125rem;
     margin-top:1.5rem;
     color:rgb(72, 72, 72);
   }
 .contenedorpieImagenBanner{
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    -webkit-box-align: center;
+    align-items: center;
 }
 .FondoBanner{
     background-image: url(bg2.avif);
@@ -220,21 +219,18 @@ body{
     color: white;
     border-radius: 10px;
     height: 48px;
-    margin-left: 20px;
     align-self: center;
     border: 0;
     padding: 0 24px 0 24px;
     font-size: 18px;
     transition: all 0.1s ease-in-out;
+    min-width: 160px;
+    display: inline;
 }
   
 #botonrojoBanner:hover {
     background-color: rgb(193, 9, 24);
-    transform: scale(1.05);
-}
-#middlebuttonBanner{
-  align-self: flex-end;
-  padding-left: 20px;
+    transform: scale(1.03);
 }
 #ratingtagBanner{
     display: flex;
@@ -253,6 +249,9 @@ body{
     .cartaProducto{
         width: calc((100% - 1rem) / 1.5);
     }
+    .summaryBanner{
+        font-size: 1.2rem;
+    }
     .tituloFeatured{
          font-size: 1rem;
          margin: 0px;
@@ -267,21 +266,26 @@ body{
         font-size: 1.3125rem;
     }
 }
+@media (min-width:600px){
+    .summaryBanner{
+        font-size: 1.5rem;
+    }
+}
+@media (min-width:1025px){
+    .contenedorpieImagenBanner{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 2rem;
+        justify-items: start;
+    }
+    .summaryBanner{
+        font-size: 1.75rem;
+    }
+    
+}
+
 /*Store*/
 
-*{
-    box-sizing: border-box;
-}
-
-body {
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    font-family: "Nintendo";
-    font-size: large;
-    color: rgb(72, 72, 72);
-    line-height: 1.4;
-}
 
 .OnlineStore {
     display: flex;
@@ -297,9 +301,12 @@ body {
 }
 
 .SectionHeader {
+    font-size: 1.3125rem;
     margin: 0;
     width: fit-content;
 }
+
+
 
 .NintendoStoreResponsiveImage {
     width: 100%;
@@ -332,7 +339,7 @@ body {
 .OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
     max-width: 940px;
     margin-right: 36px;
-    font-size: 21px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 29.4px;
 }
@@ -354,6 +361,18 @@ body {
     text-wrap: nowrap;
     color: white;
     overflow: visible;
+}
+@media (min-width: 429px){
+    .SectionHeader{
+        font-size: 1.75rem;
+    }
+}
+@media (min-width: 728px){
+    .OnlineStoreDescriptionText,.GamingSystemsDescriptionText{
+        font-size:1.3125rem ;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
 }
 
 /*
@@ -441,11 +460,7 @@ BELOW GAMING SYSTEMS STYLE
 }
 
 @media screen and (max-width: 768px) {
-    .OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
-        
-        font-size: 18px;
-        font-weight: bolder;
-    }
+    
 
     .MyNintendoStoreImageMobile {
         display: block;
@@ -457,23 +472,8 @@ BELOW GAMING SYSTEMS STYLE
 }
 
 /*News*/
-* 
-{
-    padding: 0px;
-    margin: 0px;
-}
 
-@font-face {
-    font-family: "Nintendo";
-    src: url(MuseoSans_700.ttf);
-}
 
-body
-{
-    font-family: "Nintendo";
-    line-height: 1.4;
-    box-sizing: border-box;
-}
 
 .section_general_news
 {
@@ -501,7 +501,7 @@ body
     width: 100%;
     height: 100%;
 }
-**/
+*
 h4 
 {
     color: rgb(72, 72, 72);
@@ -516,7 +516,7 @@ img
     width: 100%;
     height: 100%;
 }
-
+*/
 .contenedor:hover img
 {
         transition: all 0.6s ease;
@@ -709,12 +709,6 @@ img
         height: 296.86px;
     }
 
-    img, h3, h4, p 
-    {
-        width: 100%;
-        height: 100%;
-    }
-
 }
 
 @media only screen and (min-width:320px) and (max-width:768px)
@@ -750,11 +744,7 @@ img
         text-align: center;  
     }
 
-    img,p,h3,h4
-    {
-        width: 100%;
-        height: 100%;
-    }
+    
 
     #card1,#card2
     {
@@ -771,26 +761,7 @@ img
 }
 /*Characters*/
 
-@import url(tipografia.css);
-body{
-    width: 100vw;
-}
-body{
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-    font-family: var(--nintendo-font);
-    color: var(--color-font);
-    font-weight: var(--font-weight-nintendo);
-    font-size: var(--font-size-text);
-    line-height: var(--line-text);
-}
-*,::after,::before{
-    box-sizing: border-box;
-}
-body > section{
-    border-top: 1px lightgray solid;
-}
+
 .sectionCaracter{
     display: block;
     position: relative;
@@ -817,7 +788,7 @@ body > section{
     grid-column: 1 / span 2;
     font-size: 1.125rem;
 }
-.h1,.h2,.h3,.h4,.h5,.h6{
+/*.h1,.h2,.h3,.h4,.h5,.h6{
     font-weight: 700;
     letter-spacing: 0px;
     margin-top: 0px;
@@ -825,7 +796,7 @@ body > section{
     margin-bottom: 1em;
     margin-left: 0px;
     padding:0px;
-}
+}*/
 .personaje{
     display: flex;
     flex-direction: column;
@@ -1039,6 +1010,7 @@ body > section{
 .finalJuegoDigital{
     width: 100%;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 1rem;
@@ -1046,6 +1018,7 @@ body > section{
 .plataformaJuegoDigital{
     margin-left: 16px;
     padding-left: 1ch;
+    height: 20px;
     color: var(--color-gris-claro);
     font-size: 0.625rem;
     font-weight: 300;
@@ -1055,7 +1028,7 @@ body > section{
     width: 3em;
     height: 3em;
     color: var(--color-rojo);
-    padding-right: 16px;
+   
 }
 .botonDerecho{
     position: relative;
@@ -1063,7 +1036,7 @@ body > section{
     cursor: pointer;
     padding: 16px;
     border: 0;
-    right: 108px;
+    right: 6.5rem;
     background: rgba(0, 0, 0, 0.3);
     color: rgb(218, 218, 218);
     border-radius:var(--radio-borde-pequeño) ;
@@ -1142,18 +1115,11 @@ body > section{
 
 
 
-@media(min-width:1025px){
-    :root{
-        --radio-borde:1rem;
-    }
-}
-@media(max-width:1025px){
-    
-}
-@media(max-width:1210px){
+
+@media(max-width:1200px){
     .botonDerecho{
         position: absolute;
-        height: 420px;
+        height: 360px;
         right: 12px;
     }
 }
@@ -1174,14 +1140,14 @@ body > section{
 @media(max-width:854px){
     .botonDerecho{
         position: absolute;
-        height: 400px;
+        height: 350px;
         right: 5px;
     }
 }
 @media(max-width:429px){
     .botonDerecho{
         position: absolute;
-        height: 390px;
+        height: 330px;
         right: 0px;
     }
     .digitalHeader{
@@ -1229,4 +1195,194 @@ body > section{
         width: calc((100% ) / 3.5);
     }
     
+}
+/*Footer*/
+.FooterHeader {
+    width: 100%;
+    padding: 36px;
+    background-color: rgb(230, 0, 18);
+}
+
+.FooterHeaderLogos {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: auto repeat(4, 58px);
+    gap: 20px;
+}
+
+#FooterNintendoLogo {
+    width: 195px;
+    height: 48px;
+    fill: white;
+    margin-right: 950px;
+}
+
+.FooterRRSSIcon {
+    width: 30px;
+    height: 30px;
+}
+
+#FooterFacebookLogo {
+    width: 42px;
+    height: 42px;
+}
+
+.FooterContent {
+    height: 480px;
+    width: 100%;
+}
+
+.contenedorList {
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: 380px;
+    padding: 32px 36px;
+    transition: border-bottom-color 200ms ease-in-out 25ms, color 200ms ease-in-out 25ms;
+}
+
+.FooterContent .headingFooter {
+    color: #484848; 
+    font-weight: bolder;
+    transition: border-bottom-color 200ms ease-in-out 25ms, color 200ms ease-in-out 25ms;
+    margin-bottom: 10px;
+}
+
+
+.FooterContent .headingFooter:hover {
+    border-bottom:rgb(146, 16, 27) 2.5px solid;
+}
+
+.contenedorList a:hover {
+    border-bottom:rgb(146, 16, 27) 2.5px solid;
+    color: rgb(146, 16, 27);
+}
+
+
+.FooterContentListAbout,
+.FooterContentListShop,
+.FooterContentListStore,
+.FooterContentListSuport,
+.FooterContentListParents,
+.FooterContentListCommunity,
+.FooterContentListPrivacy {
+    width: 200px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;  
+    border-left: lightgray 1px solid;
+}
+
+.FooterContentListAbout {
+    border: none;
+}
+
+.FooterContent a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(230, 0, 18);
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.FooterContentListAbout,
+.FooterContentListShop, 
+.FooterContentListStore,
+.FooterContentListSuport{
+    grid-row: span 2;
+}
+
+.FooterContentList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+
+.FooterContentListCommunity {
+    grid-column: 6;
+    grid-row: 1;
+}
+
+.FooterContentListPrivacy {
+    grid-column: 5;
+    grid-row: 2;
+}
+
+.contenedorIcon {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    padding-right: 16px;
+}
+
+.FooterLegal {
+    display: grid;
+    grid-template-columns: 60% 30% 10%;
+    width: 100%;
+    height: 100px;
+    padding: 16px 32px;
+    background-color: rgb(45, 45, 45);
+    color: white;
+    font-size: 12px;
+}
+
+.FooterLegalInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1;
+    margin-left: -30px;
+    margin-right: 20px;
+}
+
+.FooterLegalLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2;
+}
+
+.FooterLegalLinks a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+
+.FooterLanguageSelection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3;
+}
+
+.FooterLanguageSelection a{
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.FooterLegalLinks a:hover {
+    border-bottom: rgb(230, 0, 18) 1px solid;
+}
+
+#FooterLanguageSelectionUSA {
+    width: 24px;
+    height: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: white 0.5px solid
+}
+
+.lang:hover {
+    border-bottom: white 1px solid;
 }

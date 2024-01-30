@@ -11,14 +11,12 @@
     padding: 0;
     margin: 0;
     color: #484848;
-    line-height: 1.4;
-    font-size: 14px; 
+    
     font-weight: 700;
-    cursor: pointer;
-    font-family: 'Museo Sans Rounded', sans-serif;
 }
 
 nav{
+    font-size: 14px; 
     position: sticky;
     top: 0px;
     width: 100%;
