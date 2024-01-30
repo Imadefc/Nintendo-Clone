@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
+}
+
+
+*{ 
+    padding: 0;
+    margin: 0;
+    color: #484848;
+    
+    font-weight: 700;
+}
+
+nav{
+    font-size: 14px; 
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 1000; 
+
+}
+
+.topDownItems svg {
+    padding-left: 4px;
+    padding-right: 4px;
+    transition: all 200ms ease-in-out 0s;
+}
+
+.topDownItems{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    gap: 1rem;
+    padding: 2px 0px 0px 0px;
+    transition: all 200ms ease-in-out 0s;
+    width: 100%;
+}
+
+
+.svg{
+    margin:0;
+    padding: 0px 3px 0px 0px;
+    display: relative;
+}
+
+#downchevrongames, 
+#downchevronplay,
+#downchevronswitch,
+#downchevroncategories,
+#downchevronstore{
+    transition: transform 0.3s ease;
+}
+
+.bottomstyle{
+    display: inline-flex;
+    position: relative;
+    padding-top: 4px;
+}
+
+#dropNintendo{
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    
+}
+
+#dropdownnews,
+#dropdowngames,
+#dropdownswitch,
+#dropdownplay{
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    padding: 12px;
+}
+
+#dropdownstore {
+    border: none;
+    background: transparent;
+}
+
+#dropdownstore:hover span,
+#dropdowngames:hover span,
+#dropdownswitch:hover span, 
+#dropdownnews:hover span,
+#dropdownplay:hover span{
+    color: rgb(230, 0, 18);
+}
+
+#dropdownnews:hover svg path,
+#dropdownplay:hover svg path,
+#dropdownswitch:hover svg path,
+#dropdowngames:hover svg path,
+#dropdownstore:hover svg path {
+    fill: rgb(230, 0, 18);
+}
+
+
+.newNav {
+    display: none;
+}
+
+/* Mobile Style */ 
+
+
+@media (max-width: 1024px) {
+
+    .topDownItems {
+        display: none;
+    }
+
+    .newNav  {
+        width: 100%;
+        height: calc(58px + 1rem);
+        background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+        position: fixed;
+        bottom: 0px;
+        display: block;
+        z-index: 1000;
+    }
+    
+    .mobileBottomStyle {
+        margin: auto;
+        height: 58px;
+        width: 96%;
+        max-width: 440px;
+    }
+    
+    .bottomNav {
+        position: relative;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: rgb(255, 255, 255);
+        border-radius: 100px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0.25rem 0.5rem 0px;
+    }
+    
+    .bottomMenu,
+    .shoppingCartBottom,
+    .whishListBottom {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 auto;
+        position: relative;
+        height: 58px;
+        align-items: center;
+        border: none;
+        background: transparent;
+    }
+
+    .searchBottom {
+        width: 60px;
+        height: 60px;
+        background: rgb(230, 0, 18);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: -1rem;
+    }
+    
+    .searchBottom svg path {
+        fill: rgb(255, 255, 255);
+    }
+    
+    .cartContainer {
+        display: grid;
+        justify-content: center;
+        position: relative;
+        color: inherit;
+        }
+    
+    
+    #accountBottom {
+        display: flex;
+        visibility: hidden;
+        justify-content: center;
+        flex: 1 1 auto;
+        position: relative;
+        height: 58px;
+        align-items: center;
+        border: none;
+        background: transparent;
+    }
+    
+    #spinner {
+        display: block;
+        border: 4px solid rgb(224, 222, 220);
+        border-left-color: transparent;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+    
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .bottomMenu:hover svg path,
+    #accountBottom:hover svg path,
+    .shoppingCartBottom:hover svg path,
+    .whishListBottom:hover svg path{
+        fill: rgb(230, 0, 18);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mobileBottomStyle {
+        width: 70%;
+}
+    .newnav {
+        height: 1024px;
+}
+}
+
+
+@media (max-width: 280px) {
+
+    .newnav {
+        height: 653px;
+    }
+    
+    .mobileBottomStyle {
+        width: 80%;
+        margin-left: 10px;
+    }
+        }
+    
+
