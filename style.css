@@ -117,10 +117,12 @@ body{
     transition: all 0.3s;
 
 }
-.dbs{
+.dbsFeatured{
     font-weight: 700;
     line-height: 1.35;
     font-size: 1.75rem;
+    width: 90%;
+    margin: auto;
 }
 .cartaProducto:hover .tituloFeatured{
     color: var(--color-rojo);
@@ -244,6 +246,46 @@ body{
 .svgTamañoTeenBanner{
     width: 80%;
 }
+
+.flexButtonsBanner{
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+.smallButton, .normalButton {
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    background-color: #484848;
+    color: white;
+    border: 0px;
+    transition: all 0.1s ease-in-out;
+  }
+  .smallButton {
+    height: 8px;
+    width: 50px;
+  }
+  .grayBanner{
+    background-color:var(--color-gris-claro);
+  }
+
+
+  .contenedorBotonesBanner{
+    display: grid;
+    justify-content: center;
+  }
+  
+  .normalButton:hover {
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
+  }
+  
+  .grayBanner:hover {
+    transform: scale(1.1);
+    background-color: gray;
+    color: white;
+  }
 
 @media (min-width:429px){
     .cartaProducto{

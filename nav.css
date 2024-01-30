@@ -10,12 +10,12 @@
 *{ 
     padding: 0;
     margin: 0;
-    color: #484848;
     
     font-weight: 700;
 }
 
 nav{
+    color: #484848;
     font-size: 14px; 
     position: sticky;
     top: 0px;
