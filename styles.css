@@ -52,19 +52,69 @@
 }
 
 .FooterContent {
-    height: 800px;
     width: 100%;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FooterContent a {
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: rgb(230, 0, 18);
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contenedorList a {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
 }
 
 .contenedorList {
+    width: 95vw;
+    margin: 16px 20px 16px 20px;
     display: grid;
     column-gap: 16px;
-    row-gap: 16px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-    padding: 32px 16px;
-    height: 85%;
+    row-gap: 30px;
+    grid-template-areas: 
+    "About Shop Store Suport Parents Community"
+    "About Shop Store Suport Privacy ...";
 }
+
+/*Footer Grid Areas*/
+
+.FooterContentListAbout {
+    grid-area: About;
+}
+
+.FooterContentListShop {
+    grid-area: Shop;
+}
+
+.FooterContentListStore {
+    grid-area: Store;
+}
+
+.FooterContentListSuport {
+    grid-area: Suport;
+}
+
+.FooterContentListParents {
+    grid-area: Parents;
+}
+
+.FooterContentListCommunity {
+    grid-area: Community;
+}
+
+.FooterContentListPrivacy {
+    grid-area: Privacy;
+}
+
+/*Footer Grid Areas END*/
 
 .contenedorIcon {
     width: 95vw;
@@ -75,18 +125,20 @@
 .FooterContent .headingFooter {
     color: #484848; 
     font-weight: bolder;
-    transition: border-bottom-color 200ms ease-in-out 25ms, color 200ms ease-in-out 25ms;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
     margin-bottom: 10px;
 }
 
 
 .FooterContent .headingFooter:hover {
-    border-bottom:rgb(146, 16, 27) 2.5px solid;
+    border-bottom:2px solid rgb(176, 0, 15);
+    color: #484848;
 }
 
 .contenedorList a:hover {
-    border-bottom:rgb(146, 16, 27) 2.5px solid;
-    color: rgb(146, 16, 27);
+    border-bottom: 2px solid rgb(176, 0, 15);
+    color: rgb(176, 0, 15);
 }
 
 .FooterContentListAbout,
@@ -97,7 +149,6 @@
 .FooterContentListCommunity,
 .FooterContentListPrivacy {
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;  
     align-items: flex-start;  
@@ -106,48 +157,6 @@
 
 .FooterContentListAbout {
     border: none;
-}
-
-.FooterContent a {
-    text-decoration: none;
-    font-weight: bold;
-    color: rgb(230, 0, 18);
-    margin-left: 15px;
-    font-size: 16px;
-    line-height: 2;
-}
-
-.FooterContentListAbout,
-.FooterContentListShop, 
-.FooterContentListStore,
-.FooterContentListSuport{
-    grid-row: auto;
-}
-
-.FooterContentList {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-
-.FooterContentListCommunity {
-    grid-column: auto;
-    grid-row: auto;
-}
-
-.FooterContentListPrivacy {
-    grid-column: 5;
-    grid-row: 2;
-}
-
-.contenedorIcon {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: right;
-    padding-right: 16px;
 }
 
 .FooterLegal {
@@ -220,13 +229,26 @@
     border-bottom: white 2px solid;
 }
 
-@media (max-width: 1024px) {
+/* FOOTER CONTENT MEDIA QUERIES */
 
+@media screen and (max-width: 1440px) {
     .contenedorList {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "About Shop Store Suport"
+        "Parents Community Privacy ...";
     }
 }
+
+@media (max-width: 1025px) {
+    .contenedorList {
+        grid-template-areas: 
+        "About Shop Store"
+        "Suport Parents Community"
+        "Suport Privacy ...";
+    }
+}
+
+/* FOOTER CONTENT MEDIA QUERIES END */
 
 /* FOOTER LEGAL MEDIA QUERIES */
 
@@ -256,3 +278,4 @@
         margin-top: 10px;
     }
 }
+/* FOOTER LEGAL MEDIA QUERIES END */
