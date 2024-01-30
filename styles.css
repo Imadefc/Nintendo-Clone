@@ -54,6 +54,18 @@ body {
 .FooterLegalInfo {
     display: flex;
     align-items: center;
+    
+}
+
+.FooterContent a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.FooterLegalInfo a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
 }
 
 #FooterLanguageSelectionUSA {
