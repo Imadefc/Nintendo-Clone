@@ -668,7 +668,7 @@ BELOW GAMING SYSTEMS STYLE
 
 .cardGrandeNews
 {
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 .cardPequeñoNews
@@ -1764,7 +1764,7 @@ BELOW GAMING SYSTEMS STYLE
 }
 /* FOOTER LEGAL MEDIA QUERIES END */
 /*Lineas de las secciones*/
-.BannerBody,.contenedorFeatured, .GamingSystems,.sectionCaracter,.OnlineStore{
+.BannerBody,.contenedorFeatured, .GamingSystems, .sectionCaracter, .OnlineStore{
     border-bottom: 1px solid lightgray;
 }
 .divisorbajoNews{
