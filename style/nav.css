@@ -1,25 +1,27 @@
-@import url(tipografia.css);
-
-:root{
-    --nintendo-font:"museo-sans-700", -apple-system, BlinkMacSystemFont, sans-serif;
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: url('fonts/MuseoSansRounded300.otf') format('opentype'),
+        url('fonts/MuseoSansRounded700.otf') format('opentype');
+    font-weight: normal;  
+    font-style: normal;  
 }
+
 
 *{ 
     padding: 0;
     margin: 0;
     color: #484848;
+    
     font-weight: 700;
-    font-family: var(--nintendo-font) ;
 }
 
-
 nav{
-    font-size: 16px;
+    font-size: 14px; 
     position: sticky;
     top: 0px;
     width: 100%;
     z-index: 1000; 
-    font-family: var(--nintendo-font) ;
+
 }
 
 .topDownItems svg {
@@ -33,7 +35,7 @@ nav{
     position: relative;
     justify-content: center;
     align-items: center;
-    height: 54px;
+    height: 44px;
     border-bottom: 1px solid rgb(218, 218, 218);
     background-color: rgb(255, 255, 255);
     z-index: 1;
@@ -41,6 +43,13 @@ nav{
     padding: 2px 0px 0px 0px;
     transition: all 200ms ease-in-out 0s;
     width: 100%;
+}
+
+
+.svg{
+    margin:0;
+    padding: 0px 3px 0px 0px;
+    display: relative;
 }
 
 #downchevrongames, 
