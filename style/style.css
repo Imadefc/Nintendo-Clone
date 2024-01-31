@@ -6,6 +6,7 @@
     --color-rojo-oscuro:#ac000d;
     --color-gris-claro:rgb(114, 114, 114);
     --color-letra: rgb(72, 72, 72) ;
+    --line-text:1.35;
 }
 *,::before,::after{
     box-sizing: border-box;
@@ -712,6 +713,9 @@ BELOW GAMING SYSTEMS STYLE
     justify-content: center;
     
 }
+.boton_see_all_news_svg{
+    margin-right: 10px;
+}
 
 .red_news 
 {
@@ -1287,6 +1291,7 @@ BELOW GAMING SYSTEMS STYLE
 }
 .plataformaJuegoDigital{
     margin-left: 16px;
+    margin-top: 15px;
     padding-left: 1ch;
     height: 20px;
     color: var(--color-gris-claro);
