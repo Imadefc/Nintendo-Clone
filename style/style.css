@@ -1719,6 +1719,8 @@ BELOW GAMING SYSTEMS STYLE
     }
 }
 
+
+
 @media (max-width: 1025px) {
     .contenedorList {
         grid-template-areas: 
@@ -1728,16 +1730,7 @@ BELOW GAMING SYSTEMS STYLE
     }
 }
 
-@media(max-width:764px){
-    .contenedorList{
-        grid-template-columns: repeat(4,fr);
-        grid-template-areas: 
-        "About Shop"
-        "Store Suport"
-        "Parents Community"
-        "Privacy ...";
-    }
-}
+
 
 /* FOOTER CONTENT MEDIA QUERIES END */
 
@@ -1771,7 +1764,7 @@ BELOW GAMING SYSTEMS STYLE
 }
 /* FOOTER LEGAL MEDIA QUERIES END */
 /*Lineas de las secciones*/
-.BannerBody,.contenedorFeatured, .GamingSystems,.sectionCaracter{
+.BannerBody,.contenedorFeatured, .GamingSystems,.sectionCaracter,.OnlineStore{
     border-bottom: 1px solid lightgray;
 }
 .divisorbajoNews{
