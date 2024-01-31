@@ -241,6 +241,7 @@ body{
 #ratingtagBanner{
     display: flex;
     flex-wrap: nowrap;
+    color: #484848;
 }
 .ratingBanner{
     justify-content: center;
