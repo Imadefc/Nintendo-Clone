@@ -183,8 +183,14 @@ body{
     padding-bottom: 3rem;
 }
 .imgImagenPrincipalBanner{
+    display: none;
     border-radius: 1rem;
     width: 100%;
+}
+.imgImagenSecundariaBanner{
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
 }
 .contendorImagenBanner{
     display: block;
@@ -233,6 +239,7 @@ body{
     min-width: 160px;
     display: inline;
 }
+
   
 #botonrojoBanner:hover {
     background-color: rgb(193, 9, 24);
@@ -300,6 +307,7 @@ body{
     .cartaProducto{
         width: calc((100% - 1rem) / 1.5);
     }
+    
     .summaryBanner{
         font-size: 1.2rem;
     }
@@ -321,6 +329,12 @@ body{
     .summaryBanner{
         font-size: 1.5rem;
     }
+    .imgImagenPrincipalBanner{
+        display: block;
+    }
+    .imgImagenSecundariaBanner{
+        display: none;
+    }
 }
 @media (min-width:1025px){
     .contenedorpieImagenBanner{
@@ -329,6 +343,7 @@ body{
         gap: 2rem;
         justify-items: start;
     }
+    
     .summaryBanner{
         font-size: 1.75rem;
     }
@@ -1539,7 +1554,7 @@ BELOW GAMING SYSTEMS STYLE
 }
 
 .contenedorList {
-    width: 95vw;
+    width: 100%;
     margin: 16px 20px 16px 20px;
     display: grid;
     column-gap: 16px;
