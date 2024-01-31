@@ -273,6 +273,7 @@ body{
   .contenedorBotonesBanner{
     display: grid;
     justify-content: center;
+    margin-bottom: 3rem;
   }
   
   .normalButton:hover {
@@ -736,12 +737,7 @@ BELOW GAMING SYSTEMS STYLE
     filter: brightness(70%);
 }
 
-svg 
-{
-    margin: 0px 16px 0px 0px; 
-    width: 20px;
-    height: 20px;
-}
+
 
 .boton_see_all_text_news 
 {
@@ -1178,6 +1174,7 @@ svg
     line-height: 1.35;
     font-size: 1.75rem;
     padding: 0px;
+    color: #484848;
     padding-right:16px;
     border-right: 1px rgba(114, 114, 114, 0.5) solid;
 }
@@ -1203,6 +1200,7 @@ svg
     max-width: 71.5rem;
     margin-left: auto;
     margin-right: auto;
+    color: #484848;
 }
 .contenedorDigital{
     margin-bottom: 2rem;
@@ -1729,3 +1727,11 @@ svg
     }
 }
 /* FOOTER LEGAL MEDIA QUERIES END */
+/*Lineas de las secciones*/
+.BannerBody,.contenedorFeatured, .GamingSystems,.sectionCaracter{
+    border-bottom: 1px solid lightgray;
+}
+.divisorbajoNews{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
