@@ -172,7 +172,7 @@ body{
     top:0px;
     position: absolute;
     height: calc(100% - 11.4rem);
-    background-image: url(bg2.avif);
+    background-image: url("./bg2.avif");
     width: 100%;
     left: 0px;
     z-index: -1;
