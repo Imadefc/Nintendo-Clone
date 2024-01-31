@@ -1728,6 +1728,17 @@ BELOW GAMING SYSTEMS STYLE
     }
 }
 
+@media(max-width:764px){
+    .contenedorList{
+        grid-template-columns: repeat(4,fr);
+        grid-template-areas: 
+        "About Shop"
+        "Store Suport"
+        "Parents Community"
+        "Privacy ...";
+    }
+}
+
 /* FOOTER CONTENT MEDIA QUERIES END */
 
 /* FOOTER LEGAL MEDIA QUERIES */
