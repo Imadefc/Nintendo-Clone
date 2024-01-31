@@ -199,6 +199,7 @@ body{
 .pieImagenBanner{
     width: 100%;
     padding-top: 1.5rem;
+    padding-bottom: 3rem;
 }
 .summaryBanner {
     
@@ -255,10 +256,13 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
 .smallButton, .normalButton {
     border-radius: 100px;
     height: 30px;
     width: 30px;
+    margin-right: 8px;
+    margin-left: 8px;
     background-color: #484848;
     color: white;
     border: 0px;
