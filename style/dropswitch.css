@@ -6,7 +6,7 @@
     flex-direction: column; 
     top: calc(100% + 2px);
     position: absolute;
-    z-index: 899;
+    z-index: 1899;
     background-color:  rgb(255, 255, 255);
     align-content: space-between;
     padding-right: 20px;
@@ -26,7 +26,7 @@
 }
 
 .switchcloseContainer #close {
-    padding: 0px 20px 0px 0px;
+    margin: 0px 20px 0px 0px;
 }
 
 .switchcloseContainer #close path{

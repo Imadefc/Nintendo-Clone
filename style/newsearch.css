@@ -1,9 +1,5 @@
 @import url(tipografia.css);
 
-:root{
-    --nintendo-font:"museo-sans-700", -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
 #headerHidden {
     visibility: hidden;
     display: flex;
