@@ -123,6 +123,7 @@ body{
     font-size: 1.75rem;
     width: 90%;
     margin: auto;
+    color: #484848;
 }
 .cartaProducto:hover .tituloFeatured{
     color: var(--color-rojo);
@@ -132,6 +133,7 @@ body{
     margin: 0;
     height:8rem;
     font-size: 0.875rem;
+    color: #484848;
     padding-top: 16px;
     padding-left: 1rem;
     padding-right: 16px;
@@ -346,6 +348,7 @@ body{
 .SectionHeader {
     font-size: 1.3125rem;
     margin: 0;
+    color: #484848;
     width: fit-content;
 }
 
@@ -381,6 +384,7 @@ body{
 
 .OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
     max-width: 940px;
+    color: #484848;
     margin-right: 36px;
     font-size: 1.125rem;
     font-weight: 700;
@@ -542,6 +546,7 @@ BELOW GAMING SYSTEMS STYLE
 .read_more_news 
 {
     height: 100%;
+    font-size: 1rem;
 }
 
 #fecha_news
@@ -557,6 +562,7 @@ BELOW GAMING SYSTEMS STYLE
     color: rgb(72, 72, 72);
     width: 100%;
     height: 10vw;
+    font-weight: 500;
     padding-top: 10px;
 }
 
