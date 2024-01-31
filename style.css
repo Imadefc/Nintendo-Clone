@@ -523,68 +523,96 @@ BELOW GAMING SYSTEMS STYLE
     justify-content: center;
     align-items: center; 
     margin: 0 auto;
-    width: 100%;
+    width: 96%;
+    max-width: 71.5rem;
+    margin-left: auto;
+    margin-right: auto;
     height: 100%;
-    padding: 48px 0px;    
+    padding: 48px 0px; 
+    box-sizing: border-box;
 }
 
-/*p{
+.section_cards_news
+{
+    height: 100%;
+    width: 100%;
+}
+
+.read_more_news 
+{
+    height: 100%;
+}
+
+#fecha_news
+{
     color: rgb(72, 72, 72);
     width: 100%;
     height: 100%;
     padding-top: 10px;
-    
-}*/
+}
 
-/*h3
+#parrafo_news 
+{
+    color: rgb(72, 72, 72);
+    width: 100%;
+    height: 10vw;
+    padding-top: 10px;
+}
+
+#h3_news
 {
     color: rgb(72, 72, 72);
     font-weight: bold;
     width: 100%;
-    height: 100%;
+    height: 5vw;
 }
-*
-h4 
+
+#h4_news 
 {
     color: rgb(72, 72, 72);
     width: 100%;
-    height: 100%;
+    height: 10vw;
 }
 
-img 
+.img_news 
 {
     border-radius: 10px;
     transition: all 0.6s ease;
     width: 100%;
     height: 100%;
 }
-*/
-.contenedor:hover img
+
+.contenedor_news:hover .img_news
 {
         transition: all 0.6s ease;
         filter: brightness(70%);
-        .red:hover{
-            color:  rgb(230, 0, 18);
-        }    
-}  
-    
-.contenedor:hover .red
-{
-        color:  rgb(230, 0, 18);
+      
 }
-    
-.contenedor:hover .read_more
+
+.contenedor_news:hover .news_tittle #h3_news.red_news
+{
+    color:  rgb(230, 0, 18);
+}
+
+.contenedor_news:hover .news_tittle #h4_news.red_news
+{
+    color:  rgb(230, 0, 18);
+}
+
+
+.contenedor_news:hover .read_more_news
 {
         color: darkred;
         border-bottom-color: darkred ;
 }
 
-.contenedor
+.contenedor_news
 {
     width: 100%;
+    height: auto;
 }
 
-#grid-container 
+#grid-container_news 
 {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -594,13 +622,13 @@ img
     "card1 card1 card2 card2"
     "card3 card4 card5 card6"
     "boton none none none" ;
-    width: 1143.99px;
+    width: 100%;
     height: 1051.37px;
     gap: 30px;
-    position: relative;
+    margin: 0 auto;
 }
 
-#titulo 
+#titulo_news 
 {
     grid-area: titulo;
     font-weight: bold;
@@ -610,49 +638,57 @@ img
     height: 37.78px;
 }
 
-#card1 
+.cardGrandeNews
+{
+    width: 80%;
+    height: auto;
+}
+.cardPequeñoNews
+{
+    width: 80%;
+    height: auto;
+}
+
+#card1_news 
 {
     grid-area: card1;
-    width: 555.99px;
-    height: 547.89px;
 }
 
-#card2 
+#card2_news
 {
     grid-area: card2;
-    width: 555.99px;
-    height: 547.89px;
 }
 
-#card3 
+#card3_news
 {
     grid-area: card3;
-    width: 261.99px;
-    height: 321.74px;
 }
 
-#card4 
+#card4_news
 {
     grid-area: card4;
-    width: 261.99px;
-    height: 321.74px;
 }
 
-#card5
+#card5_news
 {
     grid-area: card5;
-    width: 261.99px;
-    height: 321.74px;
 }
 
-#card6
+#card6_news
 {
     grid-area: card6;
-    width: 261.99px;
-    height: 321.74px;
 }
 
-.boton_see_all
+.recuadro_see_all_news
+ {
+    display: block;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton_see_all_news
 {
     background-color: rgb(230, 0, 18);
     border: none;
@@ -662,10 +698,18 @@ img
     grid-area: boton;
     width: 251.18px;
     height: 48.39px;
+    text-align: center; 
+    font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;  
+    
+}
+
+.red_news 
+{
+    width: 100%;
+    height: 100%;
 }
 
 .news_tittle 
@@ -674,7 +718,7 @@ img
     flex-direction: column;
     justify-content: right;
     align-items: flex-start;
-    height: 7rem;
+    height: 100%;
 }
 
 @keyframes animacion_boton 
@@ -685,45 +729,86 @@ img
     100% {transform:scale(1.09)}  
 }
 
-.boton_see_all:hover 
+.boton_see_all_news:hover 
 {
     animation: animacion_boton 0.4s linear;
     animation-fill-mode: forwards;
     filter: brightness(70%);
 }
- 
-/* svg 
-{
-    margin: 0px 16px 0px 0px;
-} */
 
-.read_more 
+svg 
+{
+    margin: 0px 16px 0px 0px; 
+    width: 20px;
+    height: 20px;
+}
+
+.boton_see_all_text_news 
+{
+    display: inline-flex;
+}
+
+.read_more_news 
 {
     color: rgb(230, 0, 18);
     border: none;
     border-bottom: 2px rgb(230, 0, 18)solid;
     background-color: white;
     font-weight: bold;
+    padding-top: 15px;
+    height: 34px;
 }
 
-@media only screen and (min-width:768px) and (max-width:1024px)
+.read_more_contenedor_news
 {
-    #grid-container 
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    height: 100%;
+}
+
+@media (min-width: 1029px) and (max-width: 1135px)
+{
+
+    .section_general_news
     {
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-areas:
-        "titulo titulo titulo titulo"
-        "card1 card1 card2 card2"
-        "card1 card1 card2 card2"
-        "card3 card4 card5 card6"
-        "boton boton boton boton" ;
-        width: 1143.99px;
+        max-width: 1135px;
+    }
+    
+    #grid-container_news 
+    {
         height: 1051.37px;
         gap: 30px;
     }
 
-    .boton_see_all
+    #h3_news
+    {
+        height: 53px;
+    }
+
+    #h4_news
+    {
+        height: 110px;
+    }
+
+    #parrafo_news
+    {
+        height: 100%;
+    }
+
+
+} 
+
+
+@media only screen and (min-width:768px) and (max-width:1029px)
+{
+    .section_general_news 
+    {
+        max-width: 1029px;
+    }
+
+    .boton_see_all_news
     {
         background-color: rgb(230, 0, 18);
         border: none;
@@ -731,75 +816,214 @@ img
         font-weight: bold; 
         border-radius: 5px;
         grid-area: boton;
-        width: 100%;
+        width: 95%;
         height: 48.39px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;  
+        display: block;
+        position: absolute;
     }
 
-    #card1,#card2
+    .cardGrandeNews
     {
-        width: 467.45px;
-        height: 498.14px;
+        width: 90%;
+        height: auto;
     }
 
-    #card3,#card4,#card5,#card6 
+    .cardPequeñoNews
     {
-        width: 217.63px;
-        height: 296.86px;
+        width: 90%;
+    height: auto;
+    }
+
+    .ellipsis_contenedor_news
+    {
+        position: relative;
+        overflow: hidden;
+        max-height: 3em;
+    }
+
+    .ellipsis_contenedor_news::after {
+        content: '\02026'; 
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, white 50%);
+        padding-left: 30px;
+    }
+
+
+    #h3_news
+    {
+        height: 70px;
+        width: 100%;
+    }
+
+    #h4_news
+    {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 50px;
+        width: 100%;
+    }
+
+    #parrafo_news
+    {
+        height: 140px;
     }
 
 }
 
-@media only screen and (min-width:320px) and (max-width:768px)
+@media only screen and (min-width: 320px) and (max-width: 768px) 
 {
-    #grid-container 
+    .section_general_news 
+    {
+        max-width: 768px;
+    }
+
+    #grid-container_news 
     {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-        "titulo titulo titulo titulo"
-        "card1 card1 card1 card1"
-        "card2 card2 card2 card2"
-        "card3 card3 card4 card4"
-        "card5 card5 card6 card6"
-        "boton boton boton boton" ;
-        width: 100%;
+            "titulo titulo"
+            "card1 card1"
+            "card2 card2"
+            "card3 card4"
+            "card5 card6"
+            "boton boton";
+        max-width: calc(100% - 30px);
         height: 100%;
     }
-    
-    .boton_see_all
+
+    .boton_see_all_news 
     {
         background-color: rgb(230, 0, 18);
         border: none;
         color: #FFFFFF;
-        font-weight: bold; 
+        font-weight: bold;
         border-radius: 5px;
         grid-area: boton;
-        width: 100%;
+        width: 85%;
         height: 48.39px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;  
+        display: block;
+        position: absolute;
     }
 
-    
-
-    #card1,#card2
+    .ellipsis_contenedor_news
     {
-        width: 718.4px;
-        height: 639.3px;
+        position: relative;
+        overflow: hidden;
+        max-height: 3em;
     }
 
-    #card3,#card4,#card5,#card6 
+    #h3_news 
     {
-        width: 347.2px;
-        height: 369.7px;
+        height: 80px;
     }
-    
+
+    #h4_news 
+    {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: auto;
+    }
+
+    .ellipsis_contenedor_news::after {
+        content: '\02026'; 
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, white 50%);
+        padding-left: 1px; 
+    }
+
+    #parrafo_news {
+        height: 100%;
+    }
+
+    .read_more_news {
+        height: 35px;
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 50px) and (max-width: 320px) 
+{
+    .section_general_news 
+    {
+        max-width: 320px;
+    }
+
+    #grid-container_news 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "titulo titulo"
+            "card1 card1"
+            "card2 card2"
+            "card3 card4"
+            "card5 card6"
+            "boton boton";
+        max-width: calc(100% - 30px);
+        height: 100%;
+    }
+
+    .boton_see_all_news 
+    {
+        background-color: rgb(230, 0, 18);
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        border-radius: 5px;
+        grid-area: boton;
+        width: 80%;
+        height: 48.39px;
+        display: block;
+        position: absolute;
+    }
+
+    .ellipsis_contenedor_news 
+    {
+        position: relative;
+        overflow: hidden;
+        max-height: 3em; 
+    }
+
+    #h3_news
+     {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: auto;
+    }
+
+    .ellipsis_contenedor_news::after 
+    {
+        content: '\02026'; 
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, white 50%);
+        padding-left: 1px; 
+    }
+
+    #h4_news 
+    {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: auto;
+    }
+
+    #parrafo_news 
+    {
+        height: 100%;
+    }
+
+    .read_more_news 
+    {
+        display: block;
+        height: 35px;
+        display: inline-block;
+    }
 }
 /*Characters*/
 
