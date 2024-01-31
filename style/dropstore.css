@@ -15,6 +15,7 @@
     border-bottom: 1px solid  rgb(218, 218, 218);
     transition: opacity 1s ease;
     opacity: 0;
+    color: #484848;
 }
 
 .borderMountain{
@@ -97,11 +98,13 @@
     height: 20px;
     border: none;
     background-color: transparent;
+    color: #484848;
 }
 
 .storeLists button a  {
     text-decoration: none;
     font-size: 15px;
+    color: #484848;
 }
 
 .storeLists ul {
@@ -115,6 +118,7 @@
     line-height: 2;
     padding-left: 6px;
     transition:  200ms ease-in-out 0s;
+    color: #484848;
 }
 
 .storeLists #svgStore {

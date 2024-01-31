@@ -199,6 +199,7 @@
 .topstoreproducts {
     margin: 0px 0px 12px;
     display: block;
+    color: #484848;
 }
 
 #insideStoreProducts {
@@ -208,6 +209,7 @@
     grid-template-rows: 79px 79px;
     gap: 1rem; 
     margin: 0px 0px 24px;
+    color: #484848;
 }
 
 .redEdition {
@@ -219,6 +221,7 @@
     position: relative;
     text-decoration: none;
     font-size: 14px;
+    color: #484848;
 }
 
 .containerRedEdition {
@@ -379,6 +382,7 @@
     position: relative;
     text-decoration: none;
     font-size: 14px;
+    color: #484848;
 }
 
 .containerMariorPG {
@@ -440,6 +444,7 @@
     position: relative;
     text-decoration: none;
     font-size: 14px;
+    color: #484848;
 }
 
 .containerWonder{
@@ -489,6 +494,7 @@
     position: relative;
     text-decoration: none;
     font-size: 14px;
+    color: #484848;
 }
 
 .containerWario {
