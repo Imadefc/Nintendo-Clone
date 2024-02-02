@@ -1,0 +1,14 @@
+
+{
+"recommendations": [
+    "provider.tagname-lowercase",
+    "provider.attr-lowercase",
+    "provider.attr-value-double-quotes",
+    "provider.doctype-first",
+    "provider.tag-pair",
+    "provider.spec-char-escape",
+    "provider.id-unique",
+    "provider.head-script-disabled",
+    "provider.style-disabled"
+]
+}

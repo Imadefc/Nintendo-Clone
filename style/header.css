@@ -1,0 +1,268 @@
+@import url(tipografia.css);
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    border-bottom: 1px solid rgb(218, 218, 218);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    font-weight: 14px;
+}
+
+
+#logo {
+    width: 105px;
+    height: 52px;
+    background-color: rgb(230, 0, 18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 0px;
+}
+
+#logo img {
+    width: 69px;
+    height: 20px;
+}
+
+.style_Flex:first-child{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.searchinput{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #484848;
+    height: 2.125rem;
+}
+
+.searchinput:hover{
+    border-bottom: 1px solid  rgb(230, 0, 18);;
+}
+
+.search {
+    width: 100%;
+}
+
+.searchbutton, .searchTitle{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    display: inline-flex;
+    padding-right: 115px;
+}
+
+
+.searchTitle {
+    padding-top: 4px;
+    color: rgb(114, 114, 114);
+    font-weight: 300;
+    padding-left: 12px;
+}
+
+.dropNewSearch {
+    width: 60px;
+}
+
+.dropNewSearch #lupa{
+    padding-top: 6px;
+    display: inline-flex;
+    position: relative;
+    justify-content: left;
+    border: none;
+    width: 50px;
+}
+
+.search:hover .searchTitle{ 
+    color: rgb(230, 0, 18);
+}
+
+.search:hover svg path{
+    fill: rgb(230, 0, 18);
+}
+
+#dropdownCategories {
+    all: unset;
+    width: 110px;
+    text-align: left;
+}
+
+.dropCategories {
+    display: inline-flex;
+    text-decoration: none;
+    position: relative;
+}
+
+
+#drop-content {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    background-color: white;
+    min-width: 135px;
+    z-index: 999;
+    border-radius: 15px;
+    height: 175px;
+    box-shadow:  0px 8px 8px 0px rgb(72, 72, 72);
+    top:  calc(100% + 5px);
+}
+
+.dropCategoriesHidden #downchevroncategories {
+    width: 18px;
+    height: 18px;
+}
+
+#drop-content a {
+    line-height: 1.5;
+    color: #484848;
+    text-decoration: none;
+    padding-left: 10px;
+    display: block;
+    text-align: left;
+    padding-top: 8px;
+    font-size: 13px;
+}
+
+
+#drop-content #categories{
+    background-color:  lightgray;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#drop-content #support{
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#drop-content a:hover  {
+    background-color: rgb(240, 236, 236);
+}
+
+#drop-content #categories:hover  {
+    background-color: rgb(240, 236, 236);
+}
+
+#dropdownCategories:hover {
+    color: rgb(230, 0, 18);
+}
+
+.dropCategories:hover svg path{
+    fill: rgb(230, 0, 18);
+}
+
+.topRightItems{
+    display: flex;
+    gap: 2rem;
+    padding: 5px 5px 5px 20px;
+    vertical-align: middle; 
+    transition: all 200ms ease-in-out 0s;
+} 
+
+.topRightItems a{ 
+    text-decoration: none;
+    border: none;
+    margin-top: 4px;
+}
+
+#mushroom {
+    height: 20px;
+    width: 60px;
+    margin-top: 4px;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+    opacity: 1;
+    }
+    50% {
+    opacity: .5;
+    }
+}
+
+
+#linksignup {
+    display: none;
+    border: none;
+    background-color: transparent;
+}
+
+.topRightItems svg {
+    margin: 0px 0.2rem 0px 0px;
+    vertical-align: middle; 
+    padding-bottom: 2px;
+    transition: all 200ms ease-in-out 0s;
+}
+
+.buttonLinkSupport:hover span,
+.buttonLinkWishlist:hover span,
+.buttonLinkCart:hover span,
+#linksignup:hover span {
+    color: rgb(230, 0, 18);
+}
+
+.buttonLinkSupport:hover .svg path,
+.buttonLinkWishlist:hover .svg path, 
+.buttonLinkCart:hover .svg path,
+#linksignup:hover .svg path{
+    fill: rgb(230, 0, 18);
+}
+
+
+.regionSelector{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px 0px 0px;
+}
+
+.regionSelector picture img {
+    border: solid 0.5px rgb(218, 218, 218);
+    border-radius: 3px;
+}
+
+
+/* Mobile Style */
+
+@media (max-width: 1260px) and (min-width: 1025px){
+
+    .searchbutton, .searchTitle{
+        padding-right: 50px; 
+    }
+}
+
+
+@media (max-width: 1024px) {
+
+    .search{
+        display: none;
+    }
+
+    .dropCategories{
+        display: none;
+    }
+
+    .buttonLinkSupport, .buttonLinkWishlist, .buttonLinkCart {
+        display: none;
+    }
+
+    #mushroom,
+    #linksignup {
+        visibility: hidden;
+    }
+
+    header{
+        background-color:  rgb(230, 0, 18);
+        width: 100%;
+    }
+}
+
+

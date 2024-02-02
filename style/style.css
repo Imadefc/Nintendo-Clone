@@ -1,0 +1,1773 @@
+@import url(tipografia.css);
+:root{
+    --radio-borde:0.75rem;
+    --radio-borde-pequeño:0.5rem;
+    --color-rojo:rgb(230, 0, 18);
+    --color-rojo-oscuro:#ac000d;
+    --color-gris-claro:rgb(114, 114, 114);
+    --color-letra: rgb(72, 72, 72) ;
+    --line-text:1.35;
+}
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    font-family: var(--nintendo-font);
+    color: var(--color-font);
+    font-weight: var(--font-weight-nintendo);
+    font-size: var(--font-size-text);
+    line-height: var(--line-text);
+    -webkit-font-smoothing: antialiased;
+}
+.contenedorEtiquetaFetured{
+    padding-left: 1rem;
+    margin-bottom: 8px;
+}
+.contenedorFeatured{
+    width: 99%;
+    overflow: hidden;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+}
+.plataformaJuegoDigitalFetured{
+    margin-left: 16px;
+    padding-left: 1ch;
+    color: var(--color-gris-claro);
+    font-size: 0.875rem;
+    font-weight: 300;
+    border-left: 2px solid var(--color-rojo);
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+.juegoImagen{
+    width: 100%;
+    border-top: 1px solid lightgray;
+    
+    border-top-right-radius: var(--radio-borde);
+    border-top-left-radius:var(--radio-borde) ;
+    transition: transform 0.3s;
+}
+.cartaProducto:hover .juegoImagen{
+    transform: translateY(-1rem);
+}
+.contenedorProducto{
+    display: flex;
+    flex-direction: row;
+    width: 130%;
+}
+
+.botonDerechoFeatured{
+    position: absolute;
+    height: 350px;
+    cursor: pointer;
+    padding: 16px;
+    border: 0;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(218, 218, 218);
+    border-radius:var(--radio-borde-pequeño) ;
+    transition: transform 0.3s;
+}
+.botonDerechoFeatured:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+.botonDerechoFeatured:hover svg{
+    color: white;
+    transform: scale(1.15);
+}
+@media(max-width:1210px){
+    .botonDerechoFeatured{
+        position: absolute;
+        height: 350px;
+        right: 12px;
+    }
+}
+@media(max-width:854px){
+    .botonDerechoFeatured{
+        position: absolute;
+        height: 350px;
+        right: 5px;
+    }
+}
+@media(max-width:429px){
+    .botonDerechoFeatured{
+        position: absolute;
+        height: 350px;
+        right: 0px;
+    }
+    .plataformaJuegoDigitalFetured{
+        font-size: 0.625rem;
+    }
+}
+.cartaProducto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 16.375rem;
+    min-width: 208px;
+    margin: 1.5rem 1rem;
+    border-radius:var(--radio-borde);
+    border-bottom: 1px solid lightgray ;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    transition: all 0.3s;
+
+}
+.dbsFeatured{
+    font-weight: 700;
+    line-height: 1.35;
+    font-size: 1.75rem;
+    width: 90%;
+    margin: auto;
+    color: #484848;
+}
+.cartaProducto:hover .tituloFeatured{
+    color: var(--color-rojo);
+}
+.tituloFeatured{
+    font-weight: 700;
+    margin: 0;
+    height:8rem;
+    font-size: 0.875rem;
+    color: #484848;
+    padding-top: 16px;
+    padding-left: 1rem;
+    padding-right: 16px;
+    transition: 0.3s;
+    padding-bottom: 1rem;
+}
+#NewsAndEvents{
+    border: none;
+}
+#hardware{
+    border-left: 2px solid var(--color-gris-claro);
+}
+.EtiquetaEstado{
+    background-color: var(--color-rojo);
+    color: white;
+    border-radius:var(--radio-borde) ;
+    padding: 3px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+#LearnMore{
+   background-color: rgb(75, 92, 206); 
+}
+
+#freeDownloadMorado{
+    background-color: rgb(149, 49, 185);;
+}
+/*Banner*/
+
+.BannerBody{
+    position: relative;
+    width: 100%;
+}
+.imagenFondoBanner{
+    top:0px;
+    position: absolute;
+    height: calc(100% - 11.4rem);
+    background-image: url("./bg2.avif");
+    width: 100%;
+    left: 0px;
+    z-index: -1;
+}
+.imagenPrincipalBanner{
+    width: 100%;
+    position: relative;
+    padding-bottom: 3rem;
+}
+.imgImagenPrincipalBanner{
+    display: none;
+    border-radius: 1rem;
+    width: 100%;
+}
+.imgImagenSecundariaBanner{
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+}
+.contendorImagenBanner{
+    display: block;
+    line-height: 0;
+    min-height: 1px;
+    width: 96%;
+    padding-top: 2rem;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pieImagenBanner{
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+}
+.summaryBanner {
+    
+    line-height: var(--line-text);
+    height: 30px;
+    font-size: 1.3125rem;
+    margin-top:1.5rem;
+    color:rgb(72, 72, 72);
+  }
+.contenedorpieImagenBanner{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.FondoBanner{
+    background-image: url(bg2.avif);
+    width: 100%;
+}
+#botonrojoBanner {
+    background-color: rgb(230, 0, 18);
+    color: white;
+    border-radius: 10px;
+    height: 48px;
+    align-self: center;
+    border: 0;
+    padding: 0 24px 0 24px;
+    font-size: 18px;
+    transition: all 0.1s ease-in-out;
+    min-width: 160px;
+    display: inline;
+}
+
+  
+#botonrojoBanner:hover {
+    background-color: rgb(193, 9, 24);
+    transform: scale(1.03);
+}
+#ratingtagBanner{
+    display: flex;
+    flex-wrap: nowrap;
+    color: #484848;
+}
+.ratingBanner{
+    justify-content: center;
+    line-height: var(--line-text);
+    font-size: 0.875rem;
+}
+.svgTamañoTeenBanner{
+    width: 80%;
+}
+
+.flexButtonsBanner{
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.smallButton, .normalButton {
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    margin-right: 8px;
+    margin-left: 8px;
+    background-color: #484848;
+    color: white;
+    border: 0px;
+    transition: all 0.1s ease-in-out;
+  }
+  .smallButton {
+    height: 8px;
+    width: 50px;
+  }
+  .grayBanner{
+    background-color:var(--color-gris-claro);
+  }
+
+
+  .contenedorBotonesBanner{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  .normalButton:hover {
+    transform: scale(1.1);
+    background-color: red;
+    color: white;
+  }
+  
+  .grayBanner:hover {
+    transform: scale(1.1);
+    background-color: gray;
+    color: white;
+  }
+
+@media (min-width:429px){
+    .cartaProducto{
+        width: calc((100% - 1rem) / 1.5);
+    }
+    
+    .summaryBanner{
+        font-size: 1.2rem;
+    }
+    .tituloFeatured{
+         font-size: 1rem;
+         margin: 0px;
+         text-align: initial;
+         padding-right: 1rem;
+    }
+    .plataformaJuegoDigital{
+        font-size: 0.875rem;
+    }
+    .dbs{
+        margin-left: 16px;
+        font-size: 1.3125rem;
+    }
+}
+@media (min-width:600px){
+    .summaryBanner{
+        font-size: 1.5rem;
+    }
+    .imgImagenPrincipalBanner{
+        display: block;
+    }
+    .imgImagenSecundariaBanner{
+        display: none;
+    }
+}
+@media (min-width:1025px){
+    .contenedorpieImagenBanner{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 2rem;
+        justify-items: start;
+    }
+    
+    .summaryBanner{
+        font-size: 1.75rem;
+    }
+    
+}
+
+/*Store*/
+
+
+.OnlineStore {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.NintendoStore {
+    width: 1144px;
+    max-width: 95%;
+}
+
+.SectionHeader {
+    font-size: 1.3125rem;
+    margin: 0;
+    color: #484848;
+    width: fit-content;
+}
+
+
+
+.NintendoStoreResponsiveImage {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border-radius: 8px;
+}
+
+.MyNintendoStoreImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.MyNintendoStoreImageMobile {
+    display: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.OnlineStoreDescription {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.OnlineStoreDescriptionText, .GamingSystemsDescriptionText {
+    max-width: 940px;
+    color: #484848;
+    margin-right: 36px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 29.4px;
+}
+
+.StartShoppingButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 169px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 12px;
+    background-color: #E60012;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    text-wrap: nowrap;
+    color: white;
+    overflow: visible;
+}
+@media (min-width: 429px){
+    .SectionHeader{
+        font-size: 1.75rem;
+    }
+}
+@media (min-width: 728px){
+    .OnlineStoreDescriptionText,.GamingSystemsDescriptionText{
+        font-size:1.3125rem ;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+/*
+BELOW GAMING SYSTEMS STYLE
+*/
+
+.GamingSystems {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.GamingSystemsContent {
+    max-width: 95%;
+    margin: auto;
+    width: 1144px;
+    display: flex;
+    flex-direction: column;
+}
+
+.GamingSystemsPicture {
+    width: 100%;
+}
+
+#GamingSystemsImg {
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+    border-radius: 8px;
+}
+
+.GamingSystemsDescription {
+    display: flex;
+    align-items: center;
+}
+
+.ExploreGamingSystemsButton {
+    width: 169px;
+    height: 46px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #E60012;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* HOVERS, ANIMATIONS AND RESPONSIVE */
+
+@keyframes ButtonHover {
+    0%   {transform:scale(1.0)}
+    25%  {transform:scale(1.09)}
+    50%  {transform:scale(1.05)}
+    100% {transform:scale(1.09)}
+}
+
+.StartShoppingButton:hover, .ExploreGamingSystemsButton:hover {
+    animation: ButtonHover 0.4s linear;
+    animation-fill-mode: forwards;
+    background-color: #c20010;
+}
+.GamingSystems {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1025px) {
+    .NintendoStoreResponsiveImage, #GamingSystemsImg {
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .OnlineStoreDescription, .GamingSystemsDescription {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .StartShoppingButton, .ExploreGamingSystemsButton {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .MyNintendoStoreImageMobile {
+        display: block;
+    }
+
+    .MyNintendoStoreImage {
+        display: none;
+    }
+}
+
+/*News*/
+
+
+
+.section_general_news
+{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;
+    width: 96%;
+    max-width: 71.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    padding: 48px 0px; 
+    box-sizing: border-box;
+}
+
+.section_cards_news
+{
+    height: 100%;
+    width: 100%;
+}
+
+.read_more_news 
+{
+    height: 100%;
+    font-size: 1rem;
+}
+
+#fecha_news
+{
+    color: rgb(72, 72, 72);
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+#parrafo_news 
+{
+    color: rgb(72, 72, 72);
+    width: 100%;
+    height: 10vw;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+#h3_news
+{
+    color: rgb(72, 72, 72);
+    font-weight: bold;
+    width: 100%;
+    height: 5vw;
+}
+
+#h4_news 
+{
+    color: rgb(72, 72, 72);
+    width: 100%;
+    height: 10vw;
+}
+
+.img_news 
+{
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor_news:hover .img_news
+{
+        transition: all 0.6s ease;
+        filter: brightness(70%);
+      
+}
+
+.contenedor_news:hover .news_tittle #h3_news.red_news
+{
+    color:  rgb(230, 0, 18);
+}
+
+.contenedor_news:hover .news_tittle #h4_news.red_news
+{
+    color:  rgb(230, 0, 18);
+}
+
+
+.contenedor_news:hover .read_more_news
+{
+        color: darkred;
+        border-bottom-color: darkred ;
+}
+
+.contenedor_news
+{
+    width: 100%;
+    height: auto;
+}
+
+#grid-container_news 
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas:
+    "titulo titulo titulo titulo"
+    "card1 card1 card2 card2"
+    "card1 card1 card2 card2"
+    "card3 card4 card5 card6"
+    "boton none none none" ;
+    width: 100%;
+    height: 1051.37px;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+#titulo_news 
+{
+    grid-area: titulo;
+    font-weight: bold;
+    font-size: large;
+    color: rgb(72, 72, 72);
+    width: 70.8px;
+    height: 37.78px;
+}
+
+.cardGrandeNews
+{
+    width: 100%;
+    height: auto;
+}
+.cardPequeñoNews
+{
+    width: 80%;
+    height: auto;
+}
+
+#card1_news 
+{
+    grid-area: card1;
+}
+
+#card2_news
+{
+    grid-area: card2;
+}
+
+#card3_news
+{
+    grid-area: card3;
+}
+
+#card4_news
+{
+    grid-area: card4;
+}
+
+#card5_news
+{
+    grid-area: card5;
+}
+
+#card6_news
+{
+    grid-area: card6;
+}
+
+.recuadro_see_all_news
+ {
+    display: block;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton_see_all_news
+{
+    background-color: rgb(230, 0, 18);
+    border: none;
+    color: #FFFFFF;
+    font-weight: bold; 
+    border-radius: 5px;
+    grid-area: boton;
+    width: 251.18px;
+    height: 48.39px;
+    text-align: center; 
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.boton_see_all_news_svg{
+    margin-right: 10px;
+}
+
+.red_news 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.news_tittle 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    height: 100%;
+}
+
+@keyframes animacion_boton 
+{
+    0%   {transform:scale(1.0)}
+    25%  {transform:scale(1.09)}
+    50%  {transform:scale(1.05)}
+    100% {transform:scale(1.09)}  
+}
+
+.boton_see_all_news:hover 
+{
+    animation: animacion_boton 0.4s linear;
+    animation-fill-mode: forwards;
+    filter: brightness(70%);
+}
+
+
+
+.boton_see_all_text_news 
+{
+    display: inline-flex;
+}
+
+.read_more_news 
+{
+    color: rgb(230, 0, 18);
+    border: none;
+    border-bottom: 2px rgb(230, 0, 18)solid;
+    background-color: white;
+    font-weight: bold;
+    padding-top: 15px;
+    height: 34px;
+}
+
+.read_more_contenedor_news
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+    height: 100%;
+}
+
+@media (min-width: 1029px) and (max-width: 1135px)
+{
+
+    .section_general_news
+    {
+        max-width: 1135px;
+    }
+    
+    #grid-container_news 
+    {
+        height: 1051.37px;
+        gap: 30px;
+    }
+
+    #h3_news
+    {
+        height: 53px;
+    }
+
+    #h4_news
+    {
+        height: 110px;
+    }
+
+    #parrafo_news
+    {
+        height: 100%;
+    }
+
+
+} 
+
+
+@media only screen and (min-width:768px) and (max-width:1029px)
+{
+    .section_general_news 
+    {
+        max-width: 1029px;
+    }
+
+    .boton_see_all_news
+    {
+        background-color: rgb(230, 0, 18);
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold; 
+        border-radius: 5px;
+        grid-area: boton;
+        width: 95%;
+        height: 48.39px;
+        display: block;
+        position: absolute;
+    }
+
+    .cardGrandeNews
+    {
+        width: 90%;
+        height: auto;
+    }
+
+    .cardPequeñoNews
+    {
+        width: 90%;
+    height: auto;
+    }
+
+    .ellipsis_contenedor_news
+    {
+        position: relative;
+        overflow: hidden;
+        max-height: 3em;
+    }
+
+    .ellipsis_contenedor_news::after {
+        content: '\02026'; 
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, white 50%);
+        padding-left: 30px;
+    }
+
+
+    #h3_news
+    {
+        height: 70px;
+        width: 100%;
+    }
+
+    #h4_news
+    {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 50px;
+        width: 100%;
+    }
+
+    #parrafo_news
+    {
+        height: 140px;
+    }
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) 
+{
+    .section_general_news 
+    {
+        max-width: 768px;
+    }
+
+    #grid-container_news 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "titulo titulo"
+            "card1 card1"
+            "card2 card2"
+            "card3 card4"
+            "card5 card6"
+            "boton boton";
+        max-width: calc(100% - 30px);
+        height: 100%;
+    }
+
+    .boton_see_all_news 
+    {
+        background-color: rgb(230, 0, 18);
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        border-radius: 5px;
+        grid-area: boton;
+        width: 85%;
+        height: 48.39px;
+        display: block;
+        position: absolute;
+    }
+
+    .ellipsis_contenedor_news
+    {
+        position: relative;
+        overflow: hidden;
+        max-height: 3em;
+    }
+
+    #h3_news 
+    {
+        height: 80px;
+    }
+
+    #h4_news 
+    {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: auto;
+    }
+
+    .ellipsis_contenedor_news::after {
+        content: '\02026'; 
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, white 50%);
+        padding-left: 1px; 
+    }
+
+    #parrafo_news {
+        height: 100%;
+    }
+
+    .read_more_news {
+        height: 35px;
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 50px) and (max-width: 320px) 
+{
+    .section_general_news 
+    {
+        max-width: 320px;
+    }
+
+    #grid-container_news 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "titulo titulo"
+            "card1 card1"
+            "card2 card2"
+            "card3 card4"
+            "card5 card6"
+            "boton boton";
+        max-width: calc(100% - 30px);
+        height: 100%;
+    }
+
+    .boton_see_all_news 
+    {
+        background-color: rgb(230, 0, 18);
+        border: none;
+        color: #FFFFFF;
+        font-weight: bold;
+        border-radius: 5px;
+        grid-area: boton;
+        width: 80%;
+        height: 48.39px;
+        display: block;
+        position: absolute;
+    }
+
+    .ellipsis_contenedor_news 
+    {
+        position: relative;
+        overflow: hidden;
+        max-height: 3em; 
+    }
+
+    #h3_news
+     {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: auto;
+    }
+
+    .ellipsis_contenedor_news::after 
+    {
+        content: '\02026'; 
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, white 50%);
+        padding-left: 1px; 
+    }
+
+    #h4_news 
+    {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: auto;
+    }
+
+    #parrafo_news 
+    {
+        height: 100%;
+    }
+
+    .read_more_news 
+    {
+        display: block;
+        height: 35px;
+        display: inline-block;
+    }
+}
+/*Characters*/
+
+
+.sectionCaracter{
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    scroll-margin-top: 120px;
+}
+.contenedorCaracter{
+    display: block;
+    color: #484848;
+    max-width: 71rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.gridCaracter{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.tituloCharacter{
+    font-weight: 700;
+    margin-block-start: 0px;
+    margin-block-end:0px;
+    grid-column: 1 / span 2;
+    font-size: 1.125rem;
+}
+/*.h1,.h2,.h3,.h4,.h5,.h6{
+    font-weight: 700;
+    letter-spacing: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 1em;
+    margin-left: 0px;
+    padding:0px;
+}*/
+.personaje{
+    display: flex;
+    flex-direction: column;
+}
+.enlacePersonaje{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+.fondoContenedor{
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15);
+    transition: 200ms ease-in-out 0s;
+}
+.enlacePersonaje{
+    cursor: pointer;
+}
+.fondoImagen{
+    display: block;
+    min-height: 1px;
+    width: 100%;
+    overflow-clip-margin: content-box;
+}
+.personajeContenedor{
+    display: block;
+    position: relative;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition:  200ms ease-in-out 0s;
+    
+}
+.enlacePersonaje:hover > .fondoContenedor{
+    transform: scale(1);
+}
+.enlacePersonaje:hover > .personajeContenedor{
+    transform: scale(1.15);
+}
+
+
+
+.personajeImagen{
+    display: block;
+    min-height: 1px;
+    width: 100%;
+    overflow-clip-margin: content-box;
+}
+.nombrePersonaje{
+    font-weight: 700;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    font-size: 1.125rem;
+}
+@media(min-width:768px){
+    .sectionCaracter{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .contenedorCaracter{
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .gridCaracter{
+        grid-template-columns: repeat(4,1fr);
+    }
+    .tituloCharacter{
+        grid-column: 1 / span 4;
+    }
+}
+@media(min-width:429px){
+    .tituloCharacter{
+        font-size: 1.75rem;
+    }
+    .nombrePersonaje{
+        font-size: 1.3125rem;
+    }
+}
+
+/*Digital Best Sellers*/
+
+@import url(tipografia.css);
+:root{
+    --radio-borde:0.75rem;
+    --radio-borde-pequeño:0.5rem;
+    --color-rojo:rgb(230, 0, 18);
+    --color-rojo-oscuro:#ac000d;
+    --color-gris-claro:rgb(114, 114, 114);
+    --color-letra: rgb(72, 72, 72) ;
+}
+
+.digitalHeader{
+    width: 100vw;
+    display: flex;
+    padding-top: 48px;
+    flex-direction: row;
+}
+.dbs{
+    font-weight: 700;
+    line-height: 1.35;
+    font-size: 1.75rem;
+    padding: 0px;
+    color: #484848;
+    padding-right:16px;
+    border-right: 1px rgba(114, 114, 114, 0.5) solid;
+}
+#dnr{
+    padding-top: 0px;
+}
+.seefullList{
+    text-decoration: none;
+    color: var(--color-rojo);
+    align-self: center;
+    margin-left: 16px;
+    font-weight: bolder;
+    border-bottom: 2px solid var(--color-rojo);
+    transition: 0.3s;
+}
+.seefullList:hover{
+    color: var(--color-rojo-oscuro);
+    border-bottom: 2px solid var(--color-rojo-oscuro);
+}
+.digitalHeader , .contenedorDigital, .footerDigitalJuegos{
+    width: 96%;
+    overflow: hidden;
+    max-width: 71.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #484848;
+}
+.contenedorDigital{
+    margin-bottom: 2rem;
+}
+.digitalNewReleases{
+    width: 120%;
+    display: flex;
+    overflow: hidden;
+    
+}
+.juegoDigital{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    max-width: 16.375rem;
+    min-width: 208px;
+    margin: 1.5rem 1rem;
+    border-radius:var(--radio-borde);
+    border-bottom: 1px solid lightgray ;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+
+}
+.juegoImagen{
+    width: 100%;
+    border-top-right-radius: var(--radio-borde);
+    border-top-left-radius:var(--radio-borde) ;
+    transition: transform 0.3s;
+}
+.juegoDigital:hover .juegoImagen{
+    transform: translateY(-1rem);
+}
+.tituloJuegoDigital{
+    font-weight: 700;
+    margin: 0;
+    font-size: 0.875rem;
+    padding-top: 16px;
+    padding-left: 1rem;
+    padding-right: 16px;
+    transition: 0.3s;
+}
+.juegoDigital:hover .tituloJuegoDigital{
+    color: var(--color-rojo);
+}
+
+.fechaJuegoDigital{
+    color:var(--color-gris-claro) ;
+    padding-left: 1rem;
+    font-size: 0.625rem;
+    margin: 0;
+    margin-bottom: 1rem;
+    
+}
+.precioJuegoDigital{
+    padding-left: 1rem;
+    font-weight: bolder;
+    margin: 0px;
+    font-size: 1rem;
+}
+.precioYDisponibilidad{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.contenedorEtiquetaJuego{
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.finalJuegoDigital{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.plataformaJuegoDigital{
+    margin-left: 16px;
+    margin-top: 15px;
+    padding-left: 1ch;
+    height: 20px;
+    color: var(--color-gris-claro);
+    font-size: 0.625rem;
+    font-weight: 300;
+    border-left: 2px solid var(--color-rojo);
+}
+.svgCorazonDigital{
+    width: 3em;
+    height: 3em;
+    color: var(--color-rojo);
+   
+}
+.botonDerecho{
+    position: relative;
+    height: 100%;
+    cursor: pointer;
+    padding: 16px;
+    border: 0;
+    right: 6.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    color: rgb(218, 218, 218);
+    border-radius:var(--radio-borde-pequeño) ;
+    transition: transform 0.3s;
+}
+.botonDerecho:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+.botonDerecho:hover svg{
+    color: white;
+    transform: scale(1.15);
+}
+.etiquetaJuego{
+    font-weight: 700;
+    background-color:rgb(149, 49, 185) ;
+    color: white;
+    margin-left: 16px;
+    border-radius: var(--radio-borde);
+    font-size: 0.75rem;
+    padding: 3px;
+}
+
+.sparks{
+    opacity: 0;
+    transition-timing-function: ease;
+}
+
+.heart-filled{
+    opacity: 0;
+}
+
+.svgCorazonDigital:hover .sparks{
+    animation: sparksAnimation 1s;
+    color: var(--color-rojo-oscuro);
+    
+    
+}
+.svgCorazonDigital:hover .heart-outline{
+    color: var(--color-rojo-oscuro);
+}
+@keyframes sparksAnimation {
+    from{
+        opacity: 0;
+    }
+    75%{
+        opacity: 1;
+        stroke-dasharray: 8;
+        stroke-dashoffset: 24;  
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+.footerDigitalJuegos{
+    margin-bottom: 64px;
+}
+
+.textoFooterDigitalJuegos{
+    font-size: 0.75rem;
+    color: var(--color-gris-claro);
+    font-weight: 300;
+}
+.enlaceEnFooterDigitalJuegos{
+    text-decoration: none;
+    color: var(--color-rojo);
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-rojo);
+    transition:0.3s;
+    
+}
+.enlaceEnFooterDigitalJuegos:hover{
+    color: var(--color-rojo-oscuro);
+    border-bottom: 2px solid var(--color-rojo-oscuro);
+}
+
+
+
+
+@media(max-width:1200px){
+    .botonDerecho{
+        position: absolute;
+        height: 360px;
+        right: 12px;
+    }
+}
+@media(max-width:768px){
+    .digitalHeader{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        scroll-margin-top: 120px;
+    }
+    .digitalHeader , .contenedorDigital, .footerDigitalJuegos{
+        max-width: 71.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    
+    
+}
+@media(max-width:854px){
+    .botonDerecho{
+        position: absolute;
+        height: 350px;
+        right: 5px;
+    }
+}
+@media(max-width:429px){
+    .botonDerecho{
+        position: absolute;
+        height: 330px;
+        right: 0px;
+    }
+    .digitalHeader{
+        display: block;
+    }
+    .dbs{
+        margin-left: 16px;
+        font-size: 1.3125rem;
+    }
+}
+@media (min-width:429px){
+    .tituloJuegoDigital{
+         font-size: 1rem;
+         margin: 0px;
+         text-align: initial;
+         padding-right: 1rem;
+    }
+    .juegoDigital{
+     width: calc((100% ) / 1.5) ;
+    }
+    .fechaJuegoDigital{
+        margin-top: 0.25rem;
+        font-size: 0.75rem;
+    }
+    .plataformaJuegoDigital{
+        font-size: 0.875rem;
+    }
+    .etiquetaJuego{
+        margin-bottom: 16px;
+    }
+    .contenedorEtiquetaJuego{
+        margin-bottom: 8px;
+    }
+    
+ 
+ }
+@media (min-width: 768px){
+    .juegoDigital{
+        width: calc((100% ) / 2.5);
+    }
+    
+}
+@media (min-width: 1025px){
+    .juegoDigital{
+        width: calc((100% ) / 3.5);
+    }
+    
+}
+
+/*Footer*/
+.FooterHeader {
+    width: 100%;
+    padding: 36px;
+    background-color: rgb(230, 0, 18);
+}
+
+.FooterHeaderLogos {
+    display: grid;
+    align-items: center;
+    justify-items: right;
+    grid-template-columns: auto repeat(4, 58px);
+    gap: 20px;
+    width: 100%;
+}
+
+.FooterHeaderLink {
+    width: 300px;
+    justify-self: left ;
+}
+
+#FooterNintendoLogo {
+    width: 195px;
+    height: 48px;
+    fill: white;
+    margin-right: auto;
+}
+
+.FooterRRSSIcon {
+    width: 30px;
+    height: 30px;
+}
+
+#FooterFacebookLogo {
+    width: 42px;
+    height: 42px;
+}
+
+.FooterContent {
+    width: 100%;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FooterContent a {
+    text-decoration: none;
+    text-wrap: nowrap;
+    color: rgb(230, 0, 18);
+    margin-left: 15px;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.contenedorList a {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.contenedorList {
+    width: 100%;
+    margin: 16px 20px 16px 20px;
+    display: grid;
+    column-gap: 16px;
+    row-gap: 30px;
+    grid-template-areas: 
+    "About Shop Store Suport Parents Community"
+    "About Shop Store Suport Privacy ...";
+}
+
+/*Footer Grid Areas*/
+
+.FooterContentListAbout {
+    grid-area: About;
+}
+
+.FooterContentListShop {
+    grid-area: Shop;
+}
+
+.FooterContentListStore {
+    grid-area: Store;
+}
+
+.FooterContentListSuport {
+    grid-area: Suport;
+}
+
+.FooterContentListParents {
+    grid-area: Parents;
+}
+
+.FooterContentListCommunity {
+    grid-area: Community;
+}
+
+.FooterContentListPrivacy {
+    grid-area: Privacy;
+}
+
+/*Footer Grid Areas END*/
+
+.contenedorIcon {
+    width: 95vw;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.FooterContent .headingFooter {
+    color: #484848; 
+    font-weight: bolder;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    margin-bottom: 10px;
+}
+
+
+.FooterContent .headingFooter:hover {
+    border-bottom:2px solid rgb(176, 0, 15);
+    color: #484848;
+}
+
+.contenedorList a:hover {
+    border-bottom: 2px solid rgb(176, 0, 15);
+    color: rgb(176, 0, 15);
+}
+
+.FooterContentListAbout,
+.FooterContentListShop,
+.FooterContentListStore,
+.FooterContentListSuport,
+.FooterContentListParents,
+.FooterContentListCommunity,
+.FooterContentListPrivacy {
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;  
+    border-left: lightgray 1px solid;
+}
+
+.FooterContentListAbout {
+    border: none;
+}
+
+.FooterLegal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr;
+    padding: 32px 16px;
+    background-color: rgb(30, 30, 30);
+    color: white;
+    font-size: 12px;
+}
+
+.FooterLegalInfo {
+    width: fit-content;
+    margin-left: 8%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    grid-column: 1;
+}
+
+.FooterLegalLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    grid-column: 2;
+    text-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.FooterLegalLinks a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.FooterLanguageSelection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 3;
+}
+
+.FooterLanguageSelection a{
+    font-weight: bold;
+    text-decoration: none;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    color: white;
+    border: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+#FooterLanguageSelectionUSA {
+    width: 24px;
+    height: 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: white 0.5px solid
+}
+
+.FooterLegalLinks a:hover {
+    border-bottom: solid 2px rgb(230, 0, 18);
+}
+
+.lang:hover {
+    border-bottom: white 2px solid;
+}
+
+/* FOOTER CONTENT MEDIA QUERIES */
+
+@media screen and (max-width: 1440px) {
+    .contenedorList {
+        grid-template-areas: 
+        "About Shop Store Suport"
+        "Parents Community Privacy ...";
+    }
+}
+
+
+
+@media (max-width: 1025px) {
+    .contenedorList {
+        grid-template-areas: 
+        "About Shop Store"
+        "Suport Parents Community"
+        "Suport Privacy ...";
+    }
+}
+
+
+
+/* FOOTER CONTENT MEDIA QUERIES END */
+
+/* FOOTER LEGAL MEDIA QUERIES */
+
+@media screen and (max-width: 1025px) {
+    .FooterLegal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .FooterLegalInfo {
+        width: 50%;
+        text-align: center;
+    }
+
+    .FooterContentListPrivacy {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .contenedorIcon {
+        width: 95vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+/* FOOTER LEGAL MEDIA QUERIES END */
+/*Lineas de las secciones*/
+.BannerBody,.contenedorFeatured, .GamingSystems, .sectionCaracter, .OnlineStore{
+    border-bottom: 1px solid lightgray;
+}
+.divisorbajoNews{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}

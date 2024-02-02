@@ -1,0 +1,169 @@
+@import url(tipografia.css);
+
+#storeContainer {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column; 
+    top: calc(100% + 1px);
+    position: absolute;
+    z-index: 1899;
+    background-color: rgb(255, 255, 255);
+    align-content: space-between;
+    width: 100%;
+    left: 0%;
+    height: 308px;
+    border-bottom: 1px solid  rgb(218, 218, 218);
+    transition: opacity 1s ease;
+    opacity: 0;
+    color: #484848;
+}
+
+.borderMountain{
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    background-size: auto 14px;
+    background-repeat: repeat-x;
+    z-index: 1;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDVweCIgaGVpZ2h0PSIxNHB4IiB2aWV3Qm94PSIwIDAgNDUgMTQiIHZlcnNpb249IjEuMSIKICAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDx0aXRsZT5TdG9yZWZyb250LWF3bmluZy1wYXR0ZXJuPC90aXRsZT4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJTdG9yZWZyb250LWF3bmluZy1wYXR0ZXJuIiBmaWxsPSIjRTYwMDEyIiBmaWxsLXJ1bGU9Im5vbnplcm8iPgogICAgICAgICAgICA8cGF0aCBkPSJNNDUsMCBMMCwwIEwwLDEzLjc3MzY4IEMxLjMzMzAyMDAxLDEzLjgzNzcxOTMgMi42NDkxNDAxMywxMy40NTM5MDE4IDMuNzM4NzcsMTIuNjgzMzUgTDE5LjI4NDQ4LDEuNjI4NjYgQzIxLjM2NjIzOTQsMC4xNDgzMTg1OTggMjQuMTU3MDEwNiwwLjE0ODMxODU5OCAyNi4yMzg3NywxLjYyODY2IEw0MS43ODQ0OCwxMi42ODMzNSBDNDIuNzI4MzU2MywxMy4zNTAwNDM4IDQzLjg0NTI4NSwxMy43Mjg3NzYgNDUsMTMuNzczNjggTDQ1LDAgWiIgaWQ9IlBhdGgiPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+    bottom: -14px;
+}
+
+.nintendostoreContainer {
+    height: 308px;
+}
+
+.titleSVG{
+    position: relative;
+    display: flex;
+    background-color: rgb(230, 0, 18);
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms ease-in-out 0s;
+}
+
+.titleSVG #store path{
+    color:rgb(255, 255, 255);
+}
+
+#toclosebuttonStore #close {
+    position: absolute;
+    justify-content: center;
+    margin-left: 620px;
+    margin-top: -20px;
+    transition: color 200ms ease-in-out 0s;
+}
+
+#toclosebuttonStore svg path{
+    color:rgb(255, 255, 255);
+}
+
+#toclosebuttonStore:hover svg path{
+    color: rgb(200, 200, 200);
+}
+
+#toclosebuttonStore {
+    background-color: transparent;
+    border: none;
+}
+
+.borderMountain {
+    position: absolute;
+}
+
+.storeLists {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    height: 150px;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.storeLists div {
+    width: 180px;
+    height: 150px;
+}
+
+.storeLists .dropexclusives  {
+    width: 200px;
+    height: 150px;
+}
+
+.storeLists button  {
+    line-height: 2;
+    display: inline-flex;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    color: #484848;
+}
+
+.storeLists button a  {
+    text-decoration: none;
+    font-size: 15px;
+    color: #484848;
+}
+
+.storeLists ul {
+    list-style: none;
+}
+
+.storeLists ul a {
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 200;
+    line-height: 2;
+    padding-left: 6px;
+    transition:  200ms ease-in-out 0s;
+    color: #484848;
+}
+
+.storeLists #svgStore {
+    display: inline-flex;
+    padding: 3px 0px 0px 0px;
+    margin-right: 4px;
+    transition: all 200ms ease-in-out 0s;
+}
+
+.storeLists ul a:hover {
+    color: rgb(230, 0, 18);
+}
+
+.dropExclusivesbutton:hover a,
+.dropgamesbutton:hover a,
+.dropCharactersbutton:hover a,
+.salesbutton:hover a,
+.dropMerchandisebutton:hover a,
+.dropHardwarebutton:hover a  {
+    color: rgb(230, 0, 18);
+    transition: all 200ms ease-in-out 0s;
+}
+
+.storeLists svg path {
+    fill: rgb(230, 0, 18);
+} 
+
+.shopButton {
+    display: flex;
+    border: rgb(230, 0, 18) solid 1px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: transparent;
+    color: rgb(230, 0, 18);
+    margin-left: 700px;
+    width:115px;
+    height: 47px;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms;
+    font-size: 16px;
+}
+
+.shopButton:hover {
+    background-color: rgb(251, 198, 224);
+    border:rgb(235, 146, 190) solid 1px;
+    transform: scale(1.1);
+}
