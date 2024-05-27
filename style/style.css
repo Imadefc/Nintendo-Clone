@@ -238,6 +238,8 @@ body{
     transition: all 0.1s ease-in-out;
     min-width: 160px;
     display: inline;
+    position: relative;
+    top: 1rem;
 }
 
   
@@ -599,7 +601,6 @@ BELOW GAMING SYSTEMS STYLE
 {
     color: rgb(72, 72, 72);
     width: 100%;
-    height: 10vw;
 }
 
 .img_news 
@@ -636,8 +637,12 @@ BELOW GAMING SYSTEMS STYLE
 
 .contenedor_news
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100%;
-    height: auto;
+    min-height: 306px;
+    min-height: 306px;
 }
 
 #grid-container_news 
@@ -651,7 +656,7 @@ BELOW GAMING SYSTEMS STYLE
     "card3 card4 card5 card6"
     "boton none none none" ;
     width: 100%;
-    height: 1051.37px;
+    height: 100%;
     gap: 30px;
     margin: 0 auto;
 }
@@ -674,7 +679,7 @@ BELOW GAMING SYSTEMS STYLE
 .cardPequeñoNews
 {
     width: 80%;
-    height: auto;
+    height: 100%;
 }
 
 #card1_news 
@@ -747,9 +752,8 @@ BELOW GAMING SYSTEMS STYLE
 {
     display: flex;
     flex-direction: column;
-    justify-content: right;
     align-items: flex-start;
-    height: 100%;
+    height: fit-content;
 }
 
 @keyframes animacion_boton 
@@ -885,10 +889,9 @@ BELOW GAMING SYSTEMS STYLE
 
     #h4_news
     {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        height: 50px;
-        width: 100%;
+        
+        
+        width: 80%;
     }
 
     #parrafo_news
